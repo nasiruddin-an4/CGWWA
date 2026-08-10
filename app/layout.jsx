@@ -16,7 +16,7 @@ const outfit = Outfit({
 });
 
 export const metadata = {
-  title: 'Coast Guard Welfare and Wellness Association',
+  title: 'Coast Guard Family Welfare Association',
   description: 'Dedicated to Coastal Development, Humanitarian Relief & Social Empowerment'
 };
 

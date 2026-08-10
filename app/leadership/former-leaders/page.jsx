@@ -16,7 +16,7 @@ export default function FormerLeadersPage() {
         categoryBn="ইতিহাসের পাতা"
         title="Former Chairmen & Directors General"
         titleBn="সাবেক চেয়ারম্যান ও মহাপরিচালকবৃন্দ"
-        subtitle="Honouring the visionary leaders who established and expanded CGWWA since 1998."
+        subtitle="Honouring the visionary leaders who established and expanded CGFWA since 1998."
         subtitleBn="১৯৯৮ সাল থেকে সংস্থাকে পরিচালিত করা সাবেক শ্রদ্ধেয় চেয়ারম্যানবৃন্দ।" />
 
 

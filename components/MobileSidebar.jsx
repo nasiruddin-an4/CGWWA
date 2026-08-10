@@ -56,7 +56,7 @@ export const MobileSidebar = ({ isOpen, onClose, onOpenSearch }) => {
           <Link href="/" onClick={onClose} className="flex items-center gap-3">
             <CoastGuardLogo className="w-10 h-12 shrink-0 drop-shadow-md" />
             <div className="flex flex-col">
-              <span className="font-extrabold text-white text-sm">CGWWA Bangladesh</span>
+              <span className="font-extrabold text-white text-sm">CGFWA Bangladesh</span>
               <span className="text-[10px] text-slate-300">{t('Coastal Welfare Portal', 'উপকূলীয় সমাজ কল্যাণ পোর্টাল')}</span>
             </div>
           </Link>

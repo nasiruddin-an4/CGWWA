@@ -77,7 +77,7 @@ export default function EducationPage() {
           {[
             { step: "1", title: "Identification", titleBn: "শনাক্তকরণ", desc: "Local volunteers identify meritorious students from low-income fishing families.", descBn: "স্থানীয় স্বেচ্ছাসেবকরা নিম্ন আয়ের জেলে পরিবারের মেধাবী শিক্ষার্থীদের শনাক্ত করে।", icon: "Search" },
             { step: "2", title: "Sponsorship", titleBn: "স্পন্সরশিপ", desc: "Students are matched with sponsors who cover full tuition and boarding.", descBn: "শিক্ষার্থীদের স্পন্সরদের সাথে যুক্ত করা হয় যারা সম্পূর্ণ টিউশন এবং থাকা-খাওয়ার খরচ বহন করে।", icon: "HandCoins" },
-            { step: "3", title: "Mentorship", titleBn: "মেন্টরশিপ", desc: "Regular academic tracking and career counseling from CGWWA officers.", descBn: "সিজিডব্লিউডব্লিউএ কর্মকর্তাদের কাছ থেকে নিয়মিত একাডেমিক ট্র্যাকিং এবং ক্যারিয়ার কাউন্সেলিং।", icon: "GraduationCap" },
+            { step: "3", title: "Mentorship", titleBn: "মেন্টরশিপ", desc: "Regular academic tracking and career counseling from CGFWA officers.", descBn: "সিজিএফডব্লিউএ কর্মকর্তাদের কাছ থেকে নিয়মিত একাডেমিক ট্র্যাকিং এবং ক্যারিয়ার কাউন্সেলিং।", icon: "GraduationCap" },
             { step: "4", title: "Graduation", titleBn: "স্নাতক", desc: "Students graduate university and return to empower their coastal communities.", descBn: "শিক্ষার্থীরা বিশ্ববিদ্যালয় থেকে স্নাতক হয় এবং তাদের উপকূলীয় সম্প্রদায়কে ক্ষমতায়ন করতে ফিরে আসে।", icon: "Award" }
           ].map((item, idx) => {
             const Icon = Icons[item.icon];

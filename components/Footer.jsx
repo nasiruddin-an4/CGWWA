@@ -18,7 +18,7 @@ export const Footer = () => {
               <CoastGuardLogo className="w-12 h-14 shrink-0 drop-shadow-md" />
               <div>
                 <h3 className="font-semibold text-white text-base tracking-tight">
-                  {t('CGWWA Bangladesh', 'সিজিডব্লিউডব্লিউএ বাংলাদেশ')}
+                  {t('CGFWA Bangladesh', 'সিজিএফডব্লিউএ বাংলাদেশ')}
                 </h3>
                 <span className="text-[11px] text-slate-400 block font-mono">
                   Reg: {organizationInfo.registrationNo}
@@ -41,7 +41,7 @@ export const Footer = () => {
               {t('Institutional Navigation', 'প্রতিষ্ঠানের লিংকসমূহ')}
             </h4>
             <ul className="space-y-2.5 text-xs text-[#8E9299]">
-              <li><Link href="/about" className="hover:text-white transition-colors">{t('About CGWWA', 'সংস্থার সংক্ষিপ্ত পরিচিতি')}</Link></li>
+              <li><Link href="/about" className="hover:text-white transition-colors">{t('About CGFWA', 'সংস্থার সংক্ষিপ্ত পরিচিতি')}</Link></li>
               <li><Link href="/about/history" className="hover:text-white transition-colors">{t('History & Founding Charter', 'ইতিহাস ও সনদ')}</Link></li>
               <li><Link href="/leadership" className="hover:text-white transition-colors">{t('Board of Governors', 'পরিচালনা পর্ষদ')}</Link></li>
               <li><Link href="/activities" className="hover:text-white transition-colors">{t('Welfare & Community Services', 'সমাজকল্যাণ সেবাসমূহ')}</Link></li>

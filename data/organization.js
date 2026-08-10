@@ -1,13 +1,13 @@
 
 export const organizationInfo= {
-  name: 'Coast Guard Welfare and Wellness Association',
+  name: 'Coast Guard Family Welfare Association',
   nameBn: 'কোস্ট গার্ড ওয়েলফেয়ার অ্যান্ড ওয়েলনেস অ্যাসোসিয়েশন',
   tagline: 'Dedicated to Coastal Development, Humanitarian Relief & Social Empowerment',
   taglineBn: 'উপকূলীয় উন্নয়ন, মানবিক সাহায্য ও সামাজিক ক্ষমতায়নে অঙ্গীকারবদ্ধ',
   establishmentYear: 1998,
   ministryAffiliation: 'Operates under the advisory of Ministry of Social Welfare & Bangladesh Coast Guard',
   ministryAffiliationBn: 'সমাজকল্যাণ মন্ত্রণালয় ও বাংলাদেশ কোস্ট গার্ড প্রশাসনিক সহযোগিতায় পরিচালিত',
-  registrationNo: 'CGWWA/GOV-REG/1998-042',
+  registrationNo: 'CGFWA/GOV-REG/1998-042',
   headquarters: {
     address: 'Plot 14/A, Administrative Zone, Agargaon, Sher-e-Bangla Nagar',
     addressBn: 'প্লট ১৪/এ, প্রশাসনিক এলাকা, আগারগাঁও, শেরেবাংলা নগর',
@@ -17,8 +17,8 @@ export const organizationInfo= {
     phone: ['+880 (2) 9876543', '+880 (2) 9876544'],
     emergencyHotline: '16122 (24/7 Coast Guard Welfare Helpline)',
     fax: '+880 (2) 9876545',
-    email: 'info@cgwwa.gov.bd',
-    helpdeskEmail: 'support@cgwwa.gov.bd',
+    email: 'info@cgfwa.gov.bd',
+    helpdeskEmail: 'support@cgfwa.gov.bd',
   },
   statistics: {
     yearsOfService: 28,

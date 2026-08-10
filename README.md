@@ -1,6 +1,6 @@
-# Coast Guard Welfare and Wellness Association (CGWWA)
+# Coast Guard Family Welfare Association (CGFWA)
 
-Welcome to the official web portal for the **Coast Guard Welfare and Wellness Association**. This platform serves as a central hub for information regarding the association's community outreach, healthcare camps, educational stipends, women's empowerment initiatives, and disaster relief programs.
+Welcome to the official web portal for the **Coast Guard Family Welfare Association**. This platform serves as a central hub for information regarding the association's community outreach, healthcare camps, educational stipends, women's empowerment initiatives, and disaster relief programs.
 
 ## Features
 

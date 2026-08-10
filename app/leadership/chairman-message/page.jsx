@@ -66,7 +66,7 @@ export default function ChairmanMessagePage() {
                 {language === 'bn' ? chairmanInfo.nameBn : chairmanInfo.name}
               </div>
               <div className="text-xs text-[#8E9299]">
-                Chairman, Board of Governors, CGWWA
+                Chairman, Board of Governors, CGFWA
               </div>
             </div>
             <div className="px-3 py-1.5 rounded-full bg-brandBlue text-white font-serif text-[10px] font-bold uppercase tracking-widest">

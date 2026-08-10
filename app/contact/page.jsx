@@ -43,8 +43,8 @@ export default function ContactPage() {
 
           <p className="text-lg md:text-xl text-slate-300 leading-relaxed font-medium max-w-2xl mx-auto">
             {t(
-              "Get in touch with CGWWA headquarters, submit public inquiries, or reach our regional field wings.",
-              "সিজিডব্লিউডব্লিউএ প্রধান কার্যালয় ও আঞ্চলিক তথ্য সেবা কেন্দ্রসমূহের সাথে যোগাযোগ করুন।"
+              "Get in touch with CGFWA headquarters, submit public inquiries, or reach our regional field wings.",
+              "সিজিএফডব্লিউএ প্রধান কার্যালয় ও আঞ্চলিক তথ্য সেবা কেন্দ্রসমূহের সাথে যোগাযোগ করুন।"
             )}
           </p>
         </div>
@@ -72,7 +72,7 @@ export default function ContactPage() {
                     <Icons.MapPin className="w-5 h-5 text-slate-400" />
                   </div>
                   <div>
-                    <p className="font-bold text-slate-800 text-sm mb-1">{t("CGWWA Bhaban", "সিজিডব্লিউডব্লিউএ ভবন")}</p>
+                    <p className="font-bold text-slate-800 text-sm mb-1">{t("CGFWA Bhaban", "সিজিএফডব্লিউএ ভবন")}</p>
                     <p className="text-slate-500 text-sm leading-relaxed">
                       {language === "bn" ? organizationInfo.headquarters.addressBn : organizationInfo.headquarters.address}
                     </p>

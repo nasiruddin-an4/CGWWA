@@ -1,6 +1,6 @@
 {
-  "name": "Coast Guard Welfare and Wellness Association",
-  "description": "Modern, professional institutional portal for Coast Guard Welfare and Wellness Association (CGWWA)",
+  "name": "Coast Guard Family Welfare Association",
+  "description": "Modern, professional institutional portal for Coast Guard Family Welfare Association (CGFWA)",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

@@ -65,7 +65,7 @@ export default function DirectorMessagePage() {
                 {language === 'bn' ? directorInfo.nameBn : directorInfo.name}
               </div>
               <div className="text-xs text-[#8E9299]">
-                Director General & CEO, CGWWA
+                Director General & CEO, CGFWA
               </div>
             </div>
             <div className="px-3 py-1.5 rounded-full bg-brandBlue text-white font-serif text-[10px] font-bold uppercase tracking-widest">

@@ -27,8 +27,8 @@ export default function AboutPage() {
         <SectionHeader
           badge="GENESIS & MANDATE"
           badgeBn="উৎপত্তি ও মূল্যবোধ"
-          title="Genesis of CGWWA"
-          titleBn="সিজিডব্লিউডব্লিউএ-এর ইতিহাস ও পটভূমি"
+          title="Genesis of CGFWA"
+          titleBn="সিজিএফডব্লিউএ-এর ইতিহাস ও পটভূমি"
           className="mb-0 sm:mb-0"
         />
 
@@ -36,19 +36,19 @@ export default function AboutPage() {
           <div className="lg:col-span-7 space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed">
             <p>
               {t(
-                'The Coast Guard Welfare and Wellness Association (CGWWA) was instituted in 1998 by a dedicated cadre of maritime officers, social workers, and community elders in Chittagong and Khulna to address severe hardship suffered by coastal families following devastating marine cyclones.',
-                '১৯৯৮ সালে উপকূলীয় ঘূর্ণিঝড় ও প্রাকৃতিক দুর্যোগে ক্ষতিগ্রস্ত পরিবারগুলোর পাশে দাঁড়াতে চট্টগ্রাম ও খুলনায় নৌকল্যাণ উদ্যোগ হিসেবে সিজিডব্লিউডব্লিউএ প্রতিষ্ঠিত হয়।'
+                'The Coast Guard Family Welfare Association (CGFWA) was instituted in 1998 by a dedicated cadre of maritime officers, social workers, and community elders in Chittagong and Khulna to address severe hardship suffered by coastal families following devastating marine cyclones.',
+                '১৯৯৮ সালে উপকূলীয় ঘূর্ণিঝড় ও প্রাকৃতিক দুর্যোগে ক্ষতিগ্রস্ত পরিবারগুলোর পাশে দাঁড়াতে চট্টগ্রাম ও খুলনায় নৌকল্যাণ উদ্যোগ হিসেবে সিজিএফডব্লিউএ প্রতিষ্ঠিত হয়।'
               )}
             </p>
             <p>
               {t(
-                'Registered under national welfare directives (Registration No: CGWWA/GOV-REG/1998-042), the organization has grown into a premier statutory institution operating under the advisory guidance of the Ministry of Social Welfare and Bangladesh Coast Guard.',
+                'Registered under national welfare directives (Registration No: CGFWA/GOV-REG/1998-042), the organization has grown into a premier statutory institution operating under the advisory guidance of the Ministry of Social Welfare and Bangladesh Coast Guard.',
                 'পরবর্তী সময়ে সমাজকল্যাণ মন্ত্রণালয় ও বাংলাদেশ কোস্ট গার্ডের তত্ত্বাবধানে এটি একটি পূর্ণাঙ্গ জাতীয় প্রতিষ্ঠানে রূপ নেয়।'
               )}
             </p>
             <p>
               {t(
-                'CGWWA’s emblem symbolizes the unity of coastal women, fishermen guilds, and relief volunteers working together to enhance the quality of life, education, and disaster resilience across Bangladesh’s 710-kilometer coastal belt.',
+                'CGFWA’s emblem symbolizes the unity of coastal women, fishermen guilds, and relief volunteers working together to enhance the quality of life, education, and disaster resilience across Bangladesh’s 710-kilometer coastal belt.',
                 'সংস্থার প্রতীকটিতে উপকূলের নারী, জেলে সম্প্রদায় ও স্বেচ্ছাসেবকদের ঐক্যবদ্ধ প্রচেষ্টার রূপ প্রতিফলিত হয়েছে।'
               )}
             </p>

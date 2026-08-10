@@ -131,8 +131,8 @@ export default function MissionVisionPage() {
           <SectionHeader
             badge="STATUTORY OBJECTIVES"
             badgeBn="সংবিধিবদ্ধ প্রধান উদ্দেশ্যসমূহ"
-            title="Key Statutory Objectives of CGWWA"
-            titleBn="সিজিডব্লিউডব্লিউএ-এর প্রধান লক্ষ্য ও উদ্দেশ্যসমূহ"
+            title="Key Statutory Objectives of CGFWA"
+            titleBn="সিজিএফডব্লিউএ-এর প্রধান লক্ষ্য ও উদ্দেশ্যসমূহ"
             subtitle="Core operational mandates defined under our founding charter, steering coastal welfare programs, emergency interventions, and sustainable community growth."
             subtitleBn="প্রতিষ্ঠানের সনদ ও সরকারি নীতিমালার আলোকে উপকূলীয় জনসেবা, জরুরি ত্রাণ ও নারী উন্নয়ন সংক্রান্ত সাংবিধানিক উদ্দেশ্যসমূহ।"
             className="mb-0 sm:mb-0"
@@ -168,7 +168,7 @@ export default function MissionVisionPage() {
             <div className="px-6 sm:px-8 pb-6 sm:pb-8 pt-0 text-[11px] font-medium text-slate-400 flex items-center justify-between">
               <span className="border-t border-slate-100 pt-3 w-full flex justify-between">
                 <span>{t(`Objective #${i + 1}`, `লক্ষ্য নম্বর #${i + 1}`)}</span>
-                <span className="text-brandBlue font-bold">CGWWA</span>
+                <span className="text-brandBlue font-bold">CGFWA</span>
               </span>
             </div>
           </Card>

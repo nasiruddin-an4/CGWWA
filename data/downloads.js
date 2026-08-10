@@ -2,8 +2,8 @@
 export const downloadsList= [
   {
     id: 'dl-001',
-    title: 'CGWWA Annual Operational & Audited Financial Report 2025-2026',
-    titleBn: 'সিজিডব্লিউডব্লিউএ বার্ষিক প্রশাসনিক ও নিরীক্ষিত আর্থিক প্রতিবেদন ২০২৫-২০২৬',
+    title: 'CGFWA Annual Operational & Audited Financial Report 2025-2026',
+    titleBn: 'সিজিএফডব্লিউএ বার্ষিক প্রশাসনিক ও নিরীক্ষিত আর্থিক প্রতিবেদন ২০২৫-২০২৬',
     category: 'Annual Reports',
     categoryBn: 'বার্ষিক প্রতিবেদন',
     publishDate: 'July 10, 2026',
@@ -11,7 +11,7 @@ export const downloadsList= [
     fileSize: '8.4 MB',
     downloadCount: 1420,
     downloadUrl: '#',
-    refNo: 'CGWWA/REP/2026/01'
+    refNo: 'CGFWA/REP/2026/01'
   },
   {
     id: 'dl-002',
@@ -24,7 +24,7 @@ export const downloadsList= [
     fileSize: '1.2 MB',
     downloadCount: 8900,
     downloadUrl: '#',
-    refNo: 'CGWWA/FORM/EDU-2026'
+    refNo: 'CGFWA/FORM/EDU-2026'
   },
   {
     id: 'dl-003',
@@ -37,7 +37,7 @@ export const downloadsList= [
     fileSize: '950 KB',
     downloadCount: 4320,
     downloadUrl: '#',
-    refNo: 'CGWWA/FORM/REL-2026'
+    refNo: 'CGFWA/FORM/REL-2026'
   },
   {
     id: 'dl-004',
@@ -50,7 +50,7 @@ export const downloadsList= [
     fileSize: '2.1 MB',
     downloadCount: 3100,
     downloadUrl: '#',
-    refNo: 'CGWWA/NOT/2026/04'
+    refNo: 'CGFWA/NOT/2026/04'
   },
   {
     id: 'dl-005',
@@ -63,11 +63,11 @@ export const downloadsList= [
     fileSize: '3.5 MB',
     downloadCount: 2750,
     downloadUrl: '#',
-    refNo: 'CGWWA/GUIDE/WAML-02'
+    refNo: 'CGFWA/GUIDE/WAML-02'
   },
   {
     id: 'dl-006',
-    title: 'CGWWA Quarterly Research Journal: Coastal Climate Adaptation Strategies',
+    title: 'CGFWA Quarterly Research Journal: Coastal Climate Adaptation Strategies',
     titleBn: 'ত্রৈমাসিক গবেষণা জার্নাল: উপকূলীয় জলবায়ু সহনশীলতা ও সামাজিক উন্নয়ন',
     category: 'Publications & Journals',
     categoryBn: 'প্রকাশনা ও জার্নাল',
@@ -76,6 +76,6 @@ export const downloadsList= [
     fileSize: '12.8 MB',
     downloadCount: 1840,
     downloadUrl: '#',
-    refNo: 'CGWWA/PUB/JRNL-14'
+    refNo: 'CGFWA/PUB/JRNL-14'
   }
 ];

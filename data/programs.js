@@ -86,7 +86,7 @@ export const flagshipPrograms= [
     shortDescBn: 'উপকূলের গ্রামীণ নারীদের সেলাই, পাটজাত পণ্য ও কারুশিল্পে প্রশিক্ষণ এবং পণ্য বিপণন সহায়তা।',
     fullDesc: [
       'WAML empowers rural women in disaster-prone belt sub-districts by establishing community training hubs equipped with modern sewing machines, looms, and raw craft materials.',
-      'CGWWA connects trained artisans directly with eco-fashion brands and fair-trade cooperatives in Dhaka and Chittagong, eliminating middleman exploitation.'
+      'CGFWA connects trained artisans directly with eco-fashion brands and fair-trade cooperatives in Dhaka and Chittagong, eliminating middleman exploitation.'
     ],
     fullDescBn: [
       'উপকূলের নারীদের স্বাবলম্বী করতে সেলাই ও কারুশিল্প ট্রেনিং সেন্টার স্থাপন এবং তৈরি পণ্য বাজারজাতকরণ।'

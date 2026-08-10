@@ -33,7 +33,7 @@ export const SearchModal = ({ isOpen, onClose }) => {
     const searchItems = [];
 
     const pages = [
-      { title: 'About CGWWA Overview', titleBn: 'আমাদের সম্পর্কে - মূল পরিচিতি', path: '/about', desc: 'Overview, founding history and statutory mandate' },
+      { title: 'About CGFWA Overview', titleBn: 'আমাদের সম্পর্কে - মূল পরিচিতি', path: '/about', desc: 'Overview, founding history and statutory mandate' },
       { title: 'History & Milestones', titleBn: 'ইতিহাস ও মাইলফলক', path: '/about/history', desc: 'Chronological timeline from 1998 to present' },
       { title: 'Mission & Vision', titleBn: 'লক্ষ্য ও উদ্দেশ্য', path: '/about/mission-vision', desc: 'Core mission, vision, and strategic values' },
       { title: 'Photo & Video Gallery', titleBn: 'গ্যালারি', path: '/gallery', desc: 'Visual archives of welfare camps and relief drives' },

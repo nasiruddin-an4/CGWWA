@@ -54,7 +54,7 @@ export const Sidebar = ({ onOpenSearch }) => {
           <CoastGuardLogo className="w-12 h-14 shrink-0 drop-shadow-lg group-hover:scale-105 transition-transform" />
           <div className="flex flex-col min-w-0">
             <div className="flex items-center gap-1.5">
-              <span className="font-extrabold text-white text-base leading-tight tracking-tight">{t('CGWWA', 'সিজিডব্লিউডব্লিউএ')}</span>
+              <span className="font-extrabold text-white text-base leading-tight tracking-tight">{t('CGFWA', 'সিজিএফডব্লিউএ')}</span>
               <span className="text-[9px] uppercase font-extrabold tracking-widest px-1.5 py-0.5 rounded bg-amber-400 text-slate-950">OFFICIAL</span>
             </div>
             <span className="text-[10px] text-[#8E9299] uppercase tracking-wider font-semibold leading-tight mt-0.5 truncate">

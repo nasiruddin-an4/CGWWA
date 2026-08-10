@@ -16,12 +16,12 @@ export const activitiesData = [
       { label: 'Districts Reached', value: '19' }
     ],
     content: [
-      'The core mandate of CGWWA is to ensure the welfare of coastal communities, particularly those dependent on the sea for their livelihood.',
+      'The core mandate of CGFWA is to ensure the welfare of coastal communities, particularly those dependent on the sea for their livelihood.',
       'Our welfare programs are structured to provide immediate relief during crises such as cyclones, tidal surges, and fishing bans. We offer direct cash transfers, dry ration kits, and emergency shelter materials.',
       'Beyond immediate relief, we run a bereavement fund that provides long-term financial security to families who lose their primary breadwinners at sea. This includes monthly stipends and vocational training for widows to ensure they can rebuild their lives with dignity.'
     ],
     contentBn: [
-      'সিজিডব্লিউডব্লিউএ-এর মূল লক্ষ্য হলো উপকূলীয় জনগোষ্ঠী, বিশেষ করে যারা জীবিকার জন্য সমুদ্রের ওপর নির্ভরশীল, তাদের কল্যাণ নিশ্চিত করা।',
+      'সিজিএফডব্লিউএ-এর মূল লক্ষ্য হলো উপকূলীয় জনগোষ্ঠী, বিশেষ করে যারা জীবিকার জন্য সমুদ্রের ওপর নির্ভরশীল, তাদের কল্যাণ নিশ্চিত করা।',
       'আমাদের কল্যাণমূলক কর্মসূচিগুলো ঘূর্ণিঝড়, জলোচ্ছ্বাস এবং মাছ ধরা নিষেধাজ্ঞার মতো সংকটের সময় তাৎক্ষণিক ত্রাণ প্রদানের জন্য তৈরি। আমরা সরাসরি নগদ অর্থ হস্তান্তর, শুকনো রেশন কিট এবং জরুরি আশ্রয় সামগ্রী সরবরাহ করি।',
       'তাৎক্ষণিক ত্রাণের বাইরেও, আমরা একটি শোক তহবিল পরিচালনা করি যা সমুদ্রে প্রধান উপার্জনকারী হারানো পরিবারগুলোকে দীর্ঘমেয়াদী আর্থিক নিরাপত্তা প্রদান করে।'
     ]
@@ -66,12 +66,12 @@ export const activitiesData = [
       { label: 'Literacy Rate Boost', value: '+15%' }
     ],
     content: [
-      'Education is the most powerful tool to break the cycle of poverty in coastal regions. CGWWA operates one of the largest coastal scholarship programs in the country.',
+      'Education is the most powerful tool to break the cycle of poverty in coastal regions. CGFWA operates one of the largest coastal scholarship programs in the country.',
       'Our Coastal Education & Merit Scholarship Program (CESP) fully funds the secondary and tertiary education of thousands of children from low-income fishing families. We believe that financial hardship should never be a barrier to a child’s potential.',
       'For extremely remote riverine communities, we have introduced Floating Digital Classrooms—solar-powered boats equipped with internet, computers, and dedicated teachers that travel from island to island, bringing modern education directly to the students.'
     ],
     contentBn: [
-      'উপকূলীয় অঞ্চলে দারিদ্র্যের চক্র ভাঙার সবচেয়ে শক্তিশালী হাতিয়ার হলো শিক্ষা। সিজিডব্লিউডব্লিউএ দেশের অন্যতম বৃহৎ উপকূলীয় বৃত্তি কর্মসূচি পরিচালনা করে।',
+      'উপকূলীয় অঞ্চলে দারিদ্র্যের চক্র ভাঙার সবচেয়ে শক্তিশালী হাতিয়ার হলো শিক্ষা। সিজিএফডব্লিউএ দেশের অন্যতম বৃহৎ উপকূলীয় বৃত্তি কর্মসূচি পরিচালনা করে।',
       'আমাদের কোস্টাল এডুকেশন অ্যান্ড মেরিট স্কলারশিপ প্রোগ্রাম (সিইএসপি) নিম্ন আয়ের জেলে পরিবারের হাজার হাজার শিশুর মাধ্যমিক ও উচ্চশিক্ষার সম্পূর্ণ অর্থায়ন করে।',
       'অত্যন্ত দুর্গম নদীমাতৃক সম্প্রদায়ের জন্য, আমরা ভাসমান ডিজিটাল ক্লাসরুম চালু করেছি—ইন্টারনেট, কম্পিউটার এবং নিবেদিতপ্রাণ শিক্ষকদের নিয়ে সৌরচালিত নৌকা যা এক দ্বীপ থেকে অন্য দ্বীপে ঘুরে শিক্ষার্থীদের কাছে আধুনিক শিক্ষা পৌঁছে দেয়।'
     ]
@@ -91,12 +91,12 @@ export const activitiesData = [
       { label: 'Free Surgeries', value: '4,500' }
     ],
     content: [
-      'Access to specialized healthcare is a major challenge for isolated coastal communities. To bridge this gap, CGWWA operates a state-of-the-art Mobile Medical Fleet.',
+      'Access to specialized healthcare is a major challenge for isolated coastal communities. To bridge this gap, CGFWA operates a state-of-the-art Mobile Medical Fleet.',
       'These specialized watercraft function as floating hospitals, complete with mini-operation theaters, diagnostic labs, and maternal care units. They are staffed by senior epidemiologists, surgeons, and dedicated nursing staff.',
       'Through this fleet, we conduct regular health camps, perform free cataract and minor surgeries, distribute essential medications, and provide critical pre- and post-natal care to mothers who would otherwise have no access to modern medicine.'
     ],
     contentBn: [
-      'বিচ্ছিন্ন উপকূলীয় জনগোষ্ঠীর জন্য বিশেষায়িত স্বাস্থ্যসেবা পাওয়া একটি বড় চ্যালেঞ্জ। এই ব্যবধান ঘোচাতে, সিজিডব্লিউডব্লিউএ একটি অত্যাধুনিক মোবাইল মেডিকেল ফ্লিট পরিচালনা করে।',
+      'বিচ্ছিন্ন উপকূলীয় জনগোষ্ঠীর জন্য বিশেষায়িত স্বাস্থ্যসেবা পাওয়া একটি বড় চ্যালেঞ্জ। এই ব্যবধান ঘোচাতে, সিজিএফডব্লিউএ একটি অত্যাধুনিক মোবাইল মেডিকেল ফ্লিট পরিচালনা করে।',
       'এই বিশেষায়িত নৌযানগুলো ভাসমান হাসপাতাল হিসেবে কাজ করে, যেখানে মিনি-অপারেশন থিয়েটার, ডায়াগনস্টিক ল্যাব এবং মাতৃকালীন সেবা ইউনিট রয়েছে।',
       'এই বহরের মাধ্যমে, আমরা নিয়মিত স্বাস্থ্য ক্যাম্প পরিচালনা করি, বিনামূল্যে ছানি ও ছোটখাটো অস্ত্রোপচার করি, প্রয়োজনীয় ওষুধ বিতরণ করি এবং মায়েদের জরুরি প্রাক- ও প্রসবোত্তর যত্ন প্রদান করি।'
     ]
@@ -141,12 +141,12 @@ export const activitiesData = [
       { label: 'Awareness Camps', value: '340' }
     ],
     content: [
-      'Our duty extends beyond human welfare to the preservation of the coastal ecosystem and cultural heritage. CGWWA actively campaigns for environmental conservation.',
+      'Our duty extends beyond human welfare to the preservation of the coastal ecosystem and cultural heritage. CGFWA actively campaigns for environmental conservation.',
       'We run massive mangrove afforestation drives along the coastlines to create natural barriers against tidal surges. We also organize extensive climate change awareness camps in schools, teaching the next generation how to adapt and protect their environment.',
       'In addition, we host the annual National Maritime & Coastal Heritage Cultural Festival to celebrate and preserve the unique folk traditions, music, and crafts of the coastal people, fostering a deep sense of pride and social responsibility.'
     ],
     contentBn: [
-      'আমাদের দায়িত্ব মানব কল্যাণের বাইরেও উপকূলীয় বাস্তুতন্ত্র এবং সাংস্কৃতিক ঐতিহ্য সংরক্ষণের প্রসারিত। সিজিডব্লিউডব্লিউএ সক্রিয়ভাবে পরিবেশ সংরক্ষণের জন্য প্রচারণা চালায়।',
+      'আমাদের দায়িত্ব মানব কল্যাণের বাইরেও উপকূলীয় বাস্তুতন্ত্র এবং সাংস্কৃতিক ঐতিহ্য সংরক্ষণের প্রসারিত। সিজিএফডব্লিউএ সক্রিয়ভাবে পরিবেশ সংরক্ষণের জন্য প্রচারণা চালায়।',
       'আমরা জলোচ্ছ্বাসের বিরুদ্ধে প্রাকৃতিক বাধা তৈরি করতে উপকূল বরাবর বিশাল ম্যানগ্রোভ বনায়ন কর্মসূচি পরিচালনা করি। আমরা স্কুলগুলোতে ব্যাপক জলবায়ু পরিবর্তন সচেতনতা ক্যাম্পের আয়োজন করি।',
       'অতিরিক্তভাবে, আমরা উপকূলীয় মানুষের অনন্য লোকজ ঐতিহ্য, সঙ্গীত এবং কারুশিল্প উদযাপন ও সংরক্ষণের জন্য বার্ষিক জাতীয় সামুদ্রিক ও উপকূলীয় ঐতিহ্য সাংস্কৃতিক উৎসবের আয়োজন করি।'
     ]

@@ -67,7 +67,7 @@ export default function HealthcarePage() {
               {t("Inside the Floating Hospitals", "ভাসমান হাসপাতালের ভেতরে")}
             </h2>
             <p className="text-slate-600 text-lg leading-relaxed">
-              {t("Access to specialized healthcare is a major challenge for isolated coastal communities. To bridge this gap, CGWWA operates a state-of-the-art Mobile Medical Fleet.", "বিচ্ছিন্ন উপকূলীয় জনগোষ্ঠীর জন্য বিশেষায়িত স্বাস্থ্যসেবা পাওয়া একটি বড় চ্যালেঞ্জ। এই ব্যবধান ঘোচাতে, সিজিডব্লিউডব্লিউএ একটি অত্যাধুনিক মোবাইল মেডিকেল ফ্লিট পরিচালনা করে।")}
+              {t("Access to specialized healthcare is a major challenge for isolated coastal communities. To bridge this gap, CGFWA operates a state-of-the-art Mobile Medical Fleet.", "বিচ্ছিন্ন উপকূলীয় জনগোষ্ঠীর জন্য বিশেষায়িত স্বাস্থ্যসেবা পাওয়া একটি বড় চ্যালেঞ্জ। এই ব্যবধান ঘোচাতে, সিজিএফডব্লিউএ একটি অত্যাধুনিক মোবাইল মেডিকেল ফ্লিট পরিচালনা করে।")}
             </p>
             
             <div className="space-y-4 pt-4">

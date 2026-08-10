@@ -144,8 +144,8 @@ export default function WomenEmpowermentPage() {
                 nameBn: "রহিমা খাতুন",
                 location: "Barguna",
                 locationBn: "বরগুনা",
-                story: "After losing my husband to a storm, I had no income. The CGWWA sewing machine and training allowed me to open a small tailoring shop. Today, I employ three other women from my village.",
-                storyBn: "ঝড়ে স্বামীকে হারানোর পর আমার কোনো আয় ছিল না। সিজিডব্লিউডব্লিউএ-এর সেলাই মেশিন এবং প্রশিক্ষণ আমাকে একটি ছোট টেইলারিং শপ খুলতে সাহায্য করেছে। আজ, আমি আমার গ্রামের আরও তিন নারীকে চাকরি দিয়েছি।"
+                story: "After losing my husband to a storm, I had no income. The CGFWA sewing machine and training allowed me to open a small tailoring shop. Today, I employ three other women from my village.",
+                storyBn: "ঝড়ে স্বামীকে হারানোর পর আমার কোনো আয় ছিল না। সিজিএফডব্লিউএ-এর সেলাই মেশিন এবং প্রশিক্ষণ আমাকে একটি ছোট টেইলারিং শপ খুলতে সাহায্য করেছে। আজ, আমি আমার গ্রামের আরও তিন নারীকে চাকরি দিয়েছি।"
               },
               {
                 name: "Ayesha Siddiqa",

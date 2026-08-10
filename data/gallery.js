@@ -14,8 +14,8 @@ export const photoGallery = [
     ],
     date: 'August 04, 2026',
     location: 'Patuakhali Auditorium, Patuakhali',
-    description: 'CGWWA Chairman distributing scholarship certificates and learning tablets to deserving high school scholars.',
-    descriptionBn: 'সিজিডব্লিউডব্লিউএ চেয়ারম্যান কর্তৃক পটুয়াখালীতে মেধাবী শিক্ষার্থীদের মাঝে শিক্ষাবৃত্তি ও লার্নিং ডিভাইস বিতরণ।'
+    description: 'CGFWA Chairman distributing scholarship certificates and learning tablets to deserving high school scholars.',
+    descriptionBn: 'সিজিএফডব্লিউএ চেয়ারম্যান কর্তৃক পটুয়াখালীতে মেধাবী শিক্ষার্থীদের মাঝে শিক্ষাবৃত্তি ও লার্নিং ডিভাইস বিতরণ।'
   },
   {
     id: 'gal-02',
@@ -106,7 +106,7 @@ export const photoGallery = [
     ],
     date: 'May 22, 2026',
     location: 'Bhola & Lakshmipur Embankment',
-    description: 'CGWWA volunteer corps and local school children planting protective green mangrove belt.',
+    description: 'CGFWA volunteer corps and local school children planting protective green mangrove belt.',
     descriptionBn: 'নদী ভাঙন রোধে স্কুল শিক্ষার্থী ও স্বেচ্ছাসেবকদের অংশগ্রহণে রিং-বাঁধে বৃক্ষরোপণ।'
   }
 ];
@@ -114,15 +114,15 @@ export const photoGallery = [
 export const videoGallery = [
   {
     id: 'vid-01',
-    title: 'CGWWA Documentary: 28 Years of Coastal Resilience & Welfare',
-    titleBn: 'প্রামাণ্যচিত্র: উপকূলীয় সেবায় সিজিডব্লিউডব্লিউএ-এর ২৮ বছরের গৌরবময় যাত্রা',
+    title: 'CGFWA Documentary: 28 Years of Coastal Resilience & Welfare',
+    titleBn: 'প্রামাণ্যচিত্র: উপকূলীয় সেবায় সিজিএফডব্লিউএ-এর ২৮ বছরের গৌরবময় যাত্রা',
     category: 'Official Ceremonies',
     type: 'video',
     url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
     date: 'July 2026',
     location: 'Dhaka Headquarters',
     description: 'A comprehensive video journey detailing our education, healthcare, and emergency disaster relief missions.',
-    descriptionBn: 'শিক্ষা, স্বাস্থ্য, খাদ্য ও মানবসেবায় সিজিডব্লিউডব্লিউএ-এর কার্যক্রম নিয়ে নির্মিত তথ্যচিত্র।'
+    descriptionBn: 'শিক্ষা, স্বাস্থ্য, খাদ্য ও মানবসেবায় সিজিএফডব্লিউএ-এর কার্যক্রম নিয়ে নির্মিত তথ্যচিত্র।'
   },
   {
     id: 'vid-02',

@@ -28,8 +28,8 @@ export default function NewsPage() {
       <PageHeader
         title="News & Press Releases"
         titleBn="সংবাদ ও প্রেস বিজ্ঞপ্তি"
-        subtitle="Official updates, field reports, and press releases from CGWWA headquarters."
-        subtitleBn="সিজিডব্লিউডব্লিউএ হেডকোয়ার্টার্স থেকে প্রকাশিত সংবাদ, ফিল্ড রিপোর্ট ও প্রেস নোটিশ।"
+        subtitle="Official updates, field reports, and press releases from CGFWA headquarters."
+        subtitleBn="সিজিএফডব্লিউএ হেডকোয়ার্টার্স থেকে প্রকাশিত সংবাদ, ফিল্ড রিপোর্ট ও প্রেস নোটিশ।"
       />
 
       {/* Filter and Search Bar */}

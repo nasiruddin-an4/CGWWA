@@ -11,7 +11,7 @@ export const chairmanInfo= {
   bio: [
     'Rear Admiral M. Rafiqul Islam (Retd.) served with distinction for over 36 years in naval command, coastal defense operations, and maritime policy formulation.',
     'He holds a Master’s Degree in Defense Studies from National Defence College and has represented Bangladesh in international maritime welfare forums in Geneva and Singapore.',
-    'Under his leadership, CGWWA modernized its emergency disaster volunteer force and launched digital micro-grants for coastal women entrepreneurs.'
+    'Under his leadership, CGFWA modernized its emergency disaster volunteer force and launched digital micro-grants for coastal women entrepreneurs.'
   ],
   bioBn: [
     'রিয়ার অ্যাডমিরাল এম রফিকুল ইসলাম (অবঃ) বাংলাদেশ নৌবাহিনী ও সামুদ্রিক সেবায় দীর্ঘ ৩৬ বছর নিষ্ঠার সাথে দায়িত্ব পালন করেছেন।',
@@ -23,8 +23,8 @@ export const chairmanInfo= {
   quoteBn: 'আমাদের সংকল্প - বঙ্গোপসাগরে যখন মেঘ জমে, তখন যেন কোনো উপকূলীয় শিশু স্কুল থেকে ছিটকে না পড়ে এবং কোনো জেলে পরিবার যেন অসহায় বোধ না করে।',
   fullMessage: [
     'Distinguished Citizens, Patrons, and Volunteers,',
-    'It is a profound privilege to address you on behalf of the Coast Guard Welfare and Wellness Association (CGWWA). Bangladesh’s 710-kilometer coastline is home to nearly 35 million resilient citizens who stand on the front lines of climate vulnerability, riverbank erosion, and seasonal cyclonic surges.',
-    'Since our inception in 1998, CGWWA has remained committed to translating goodwill into institutional empowerment. We believe that true coastal welfare is not merely emergency relief distribution; it is building permanent human capability.',
+    'It is a profound privilege to address you on behalf of the Coast Guard Family Welfare Association (CGFWA). Bangladesh’s 710-kilometer coastline is home to nearly 35 million resilient citizens who stand on the front lines of climate vulnerability, riverbank erosion, and seasonal cyclonic surges.',
+    'Since our inception in 1998, CGFWA has remained committed to translating goodwill into institutional empowerment. We believe that true coastal welfare is not merely emergency relief distribution; it is building permanent human capability.',
     'Over the past fiscal year, our flagship initiatives reached over 450,000 citizens across 64 districts. Through our Coastal Education & Merit Scholarship Program, thousands of children of fishermen and low-income families are pursuing higher degrees in universities.',
     'Our Mobile Medical Fleet continues to navigate remote estuaries, bringing specialized doctors, maternal healthcare, and life-saving medicines directly to island unions in Patuakhali, Bhola, and Satkhira.',
     'As we look toward the future, we are leveraging digital governance, solar desalination infrastructure, and satellite-enabled disaster safety beacons. I express my deepest gratitude to our volunteers, advisory bodies, and partner institutions whose unwavering support empowers us to serve Bangladesh.',
@@ -56,18 +56,18 @@ export const directorInfo= {
   ],
   messageTitle: 'Efficiency, Integrity & Rapid Field Execution',
   messageTitleBn: 'দক্ষতা, একনিষ্ঠতা ও দ্রুত মাঠপর্যায়ের বাস্তবায়ন',
-  quote: 'Every taka entrusted to CGWWA is converted into tangible, auditable relief and long-term empowerment for coastal communities.',
-  quoteBn: 'সিজিডব্লিউডব্লিউএ-তে অর্পিত প্রতিটি সম্পদ উপকূলীয় জনগোষ্ঠীর প্রত্যক্ষ কল্যাণে স্বচ্ছতার সাথে ব্যয় করা হয়।',
+  quote: 'Every taka entrusted to CGFWA is converted into tangible, auditable relief and long-term empowerment for coastal communities.',
+  quoteBn: 'সিজিএফডব্লিউএ-তে অর্পিত প্রতিটি সম্পদ উপকূলীয় জনগোষ্ঠীর প্রত্যক্ষ কল্যাণে স্বচ্ছতার সাথে ব্যয় করা হয়।',
   fullMessage: [
     'Assalamu Alaikum and Warm Greetings,',
-    'At the executive Directorate of CGWWA, our focus is unwavering: operational excellence, speed in emergency response, and radical transparency in welfare delivery.',
+    'At the executive Directorate of CGFWA, our focus is unwavering: operational excellence, speed in emergency response, and radical transparency in welfare delivery.',
     'In 2026, we expanded our physical footprint to cover 120 emergency health camps, distributed BDT 8.5 Crore in fishermen bereavement grants, and established 45 vocational handloom hubs.',
     'Our administrative structure ensures that 92% of operational expenditures go directly to beneficiary programs. Through our integrated digital portal, every scholarship applicant and relief claimant can track their application status seamlessly.',
     'We welcome collaboration with national and international welfare bodies as we strive to build a safer, smarter coastal Bangladesh.'
   ],
   fullMessageBn: [
     'আসসালামু আলাইকুম,',
-    'সিজিডব্লিউডব্লিউএ মহাপরিচালকের দপ্তরে আমাদের প্রথম লক্ষ্য - দ্রুত সাড়া প্রদান, প্রশাসনিক স্বচ্ছতা ও বস্তুনিষ্ঠ মাঠপর্যায়ের বাস্তবায়ন।',
+    'সিজিএফডব্লিউএ মহাপরিচালকের দপ্তরে আমাদের প্রথম লক্ষ্য - দ্রুত সাড়া প্রদান, প্রশাসনিক স্বচ্ছতা ও বস্তুনিষ্ঠ মাঠপর্যায়ের বাস্তবায়ন।',
     'আমাদের ডিজিটাল সিস্টেমের মাধ্যমে সাহায্যপ্রার্থী প্রতিটি পরিবার স্বচ্ছতার সাথে তাদের আবেদন পরিস্থিতি ট্র্যাক করতে পারছেন।'
   ]
 };
