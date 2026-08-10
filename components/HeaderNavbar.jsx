@@ -141,14 +141,14 @@ export const HeaderNavbar = ({ onOpenSearch }) => {
               <Globe className="w-3.5 h-3.5 text-current" />
               <span>{language === 'en' ? 'BN' : 'EN'}</span>
             </button>
-            <a href="https://mohona.gov.bd" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-brandYellow hover:bg-brandYellowDark text-black text-xs font-bold transition-all shadow-sm hover:shadow-md">
+            <a href="https://mohona-xi.vercel.app/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-brandYellow hover:bg-brandYellowDark text-black text-xs font-bold transition-all shadow-sm hover:shadow-md">
               <span>{t('Mohona', 'মোহনা')}</span>
               <ExternalLink className="w-3.5 h-3.5" />
             </a>
           </div>
 
           <div className="flex items-center gap-2 lg:hidden">
-            <a href="https://mohona.gov.bd" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-brandYellow text-black text-xs font-bold shadow-sm">
+            <a href="https://mohona-xi.vercel.app/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-brandYellow text-black text-xs font-bold shadow-sm">
               <span>{t('Mohona', 'মোহনা')}</span>
               <ExternalLink className="w-3 h-3" />
             </a>
@@ -225,7 +225,7 @@ export const HeaderNavbar = ({ onOpenSearch }) => {
               })}
 
             <div className="pt-2">
-              <a href="https://mohona.gov.bd" target="_blank" rel="noopener noreferrer" className="w-full py-2.5 px-4 rounded-md bg-brandYellow text-black font-bold text-xs flex items-center justify-center gap-2 shadow-sm">
+              <a href="https://mohona-xi.vercel.app/" target="_blank" rel="noopener noreferrer" className="w-full py-2.5 px-4 rounded-md bg-brandYellow text-black font-bold text-xs flex items-center justify-center gap-2 shadow-sm">
                 <span>{t('Visit Mohona Portal', 'মোহনা পোর্টালে যান')}</span>
                 <ExternalLink className="w-4 h-4" />
               </a>
