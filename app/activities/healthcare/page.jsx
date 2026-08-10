@@ -126,7 +126,7 @@ export default function HealthcarePage() {
             {[
               { title: "Free Eye Care & Cataract", titleBn: "বিনামূল্যে চক্ষু সেবা এবং ছানি", icon: "Eye", desc: "Thousands of elderly coastal residents regain their sight annually through our free cataract surgery camps.", descBn: "আমাদের বিনামূল্যে ছানি অস্ত্রোপচার ক্যাম্পের মাধ্যমে প্রতি বছর হাজার হাজার বয়স্ক উপকূলীয় বাসিন্দা তাদের দৃষ্টিশক্তি ফিরে পান।" },
               { title: "Epidemic Response", titleBn: "মহামারী প্রতিক্রিয়া", icon: "ShieldPlus", desc: "Rapid deployment of medical teams during cholera and waterborne disease outbreaks after cyclones.", descBn: "ঘূর্ণিঝড়ের পর কলেরা এবং পানিবাহিত রোগের প্রাদুর্ভাবের সময় মেডিকেল টিমের দ্রুত মোতায়েন।" },
-              { title: "Free Medicine Dispensation", titleBn: "বিনামূল্যে ওষুধ বিতরণ", icon: "Pills", desc: "Providing essential medicines, antibiotics, and vitamins free of cost to impoverished communities.", descBn: "দরিদ্র সম্প্রদায়কে বিনামূল্যে প্রয়োজনীয় ওষুধ, অ্যান্টিবায়োটিক এবং ভিটামিন সরবরাহ করা।" }
+              { title: "Free Medicine Dispensation", titleBn: "বিনামূল্যে ওষুধ বিতরণ", icon: "Pill", desc: "Providing essential medicines, antibiotics, and vitamins free of cost to impoverished communities.", descBn: "দরিদ্র সম্প্রদায়কে বিনামূল্যে প্রয়োজনীয় ওষুধ, অ্যান্টিবায়োটিক এবং ভিটামিন সরবরাহ করা।" }
             ].map((camp, idx) => {
               const Icon = Icons[camp.icon];
               return (
