@@ -18,7 +18,7 @@ export const flagshipPrograms= [
       'প্রাকৃতিক দুর্যোগে ক্ষতিগ্রস্ত বা মৌসুমি নিষেধাজ্ঞার সময় জেলে পরিবারগুলোকে আর্থিক উপবৃত্তি ও বই-পুস্তক সরবরাহ করা হয়।'
     ],
     iconName: 'GraduationCap',
-    image: '/images/programs-placeholder.png',
+    image: 'https://res.cloudinary.com/armmzmyq/image/upload/v1787248725/cgfwa/programs-placeholder_rymijf.jpg',
     beneficiariesTarget: '15,000+ Students Annually',
     districtsInvolved: ['Patuakhali', 'Barguna', 'Bhola', 'Satkhira', 'Noakhali', 'Cox’s Bazar'],
     keyObjectives: [
@@ -56,7 +56,7 @@ export const flagshipPrograms= [
       'মাছ ধরার ৬৫ দিনের সরকারি নিষেধাজ্ঞাকালে জেলে পরিবারগুলোকে চাল, তেল, ডালসহ পুষ্টিকর খাদ্য প্যাকেজ ও বিকল্প আয়ের সাহায্য প্রদান।'
     ],
     iconName: 'ShieldAlert',
-    image: '/images/programs-placeholder.png',
+    image: 'https://res.cloudinary.com/armmzmyq/image/upload/v1787248725/cgfwa/programs-placeholder_rymijf.jpg',
     beneficiariesTarget: '80,000+ Fishermen Families',
     districtsInvolved: ['Bhola', 'Lakshmipur', 'Chandpur', 'Chittagong', 'Khulna', 'Bagerhat'],
     keyObjectives: [
@@ -92,7 +92,7 @@ export const flagshipPrograms= [
       'উপকূলের নারীদের স্বাবলম্বী করতে সেলাই ও কারুশিল্প ট্রেনিং সেন্টার স্থাপন এবং তৈরি পণ্য বাজারজাতকরণ।'
     ],
     iconName: 'Scissors',
-    image: '/images/programs-placeholder.png',
+    image: 'https://res.cloudinary.com/armmzmyq/image/upload/v1787248725/cgfwa/programs-placeholder_rymijf.jpg',
     beneficiariesTarget: '12,000 Women Artisans',
     districtsInvolved: ['Satkhira', 'Bagerhat', 'Pirojpur', 'Jhalokathi', 'Patuakhali'],
     keyObjectives: [
@@ -128,7 +128,7 @@ export const flagshipPrograms= [
       'উপকূলের তীব্র লবণাক্ত এলাকায় সৌরচালিত পানি শোধন প্ল্যান্ট বসিয়ে খাবার পানি সরবরাহ নিশ্চিত করা।'
     ],
     iconName: 'Droplets',
-    image: '/images/programs-placeholder.png',
+    image: 'https://res.cloudinary.com/armmzmyq/image/upload/v1787248725/cgfwa/programs-placeholder_rymijf.jpg',
     beneficiariesTarget: '120,000 Citizens',
     districtsInvolved: ['Satkhira', 'Khulna', 'Bagerhat', 'Barguna'],
     keyObjectives: [

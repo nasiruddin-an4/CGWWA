@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 
+import Image from 'next/image';
+
 export function HeroSection() {
   const { language, t } = useLanguage();
   const [activeHeroTab, setActiveHeroTab] = useState(0);
@@ -12,40 +14,53 @@ export function HeroSection() {
   const heroStories = [
     {
       title: t(
-        'Empowering Coastal Scholars',
-        'উপকূলীয় চরাঞ্চলের মেধাবী শিক্ষার্থীদের উপবৃত্তি'
+        'Sewing Training Workshop',
+        'সেলাই প্রশিক্ষণ কর্মশালা'
       ),
       desc: t(
-        'Reaching remote riverine sub-districts to ensure zero high-school dropout.',
-        'উপকূলীয় চরাঞ্চলের শিক্ষার্থীদের ঝরে পড়া রোধে নিয়মিত উপবৃত্তি প্রদান।'
+        'Chief Guest Farhana Begum, President CGFWA, inaugurating the sewing machines to empower coastal women.',
+        'উপকূলীয় নারীদের স্বাবলম্বী করার লক্ষ্যে প্রেসিডেন্ট সিজিএফডব্লিউএ ফারহানা বেগম কর্তৃক সেলাই প্রশিক্ষণ কর্মশালা উদ্বোধন।'
       ),
-      image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=2000&q=80',
-      link: '/programs/coastal-education-scholarship'
+      image: 'https://res.cloudinary.com/armmzmyq/image/upload/v1787248264/cgfwa/compressed_1787248261628_BCG_5647_vzvhhu.jpg',
+      link: '/activities/training-programs/sewing-training-workshop'
     },
     {
       title: t(
-        'Lifeline for Fishing Communities',
-        'মৌসুমি মাছ ধরা নিষেধাজ্ঞায় জেলে পরিবারে সহায়তা'
+        'Tree Plantation Campaign 2026',
+        'বৃক্ষরোপণ অভিযান ২০২৬'
       ),
       desc: t(
-        'Distributing monthly ration packs and grants during conservation periods.',
-        '৬৫ দিনের সরকারি নিষেধাজ্ঞাকালে উপকূলীয় জেলে পরিবারে আর্থিক সহায়তা।'
+        'Decorating the country with tree plantation. Planting trees to protect the coastal environment.',
+        '“বৃক্ষরোপণে সাজাই দেশ, সবার আগে বাংলাদেশ” - উপকূলীয় পরিবেশ রক্ষায় সিজিএফডব্লিউএ এর উদ্যোগে বৃক্ষরোপণ কর্মসূচি।'
       ),
-      image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=2000&q=80',
-      link: '/programs/emergency-fisherman-relief'
+      image: 'https://res.cloudinary.com/armmzmyq/image/upload/v1787248267/cgfwa/compressed_1787248264727_BCG_7482_zehb2t.jpg',
+      link: '/activities/community-engagement/tree-plantation'
     },
     {
       title: t(
-        'Vocational Skills for Women',
-        'উপকূলের স্বাবলম্বী নারীদের কারিগরি প্রশিক্ষণ'
+        'Iftar Distribution',
+        'ইফতার বিতরণ'
       ),
       desc: t(
-        'Establishing community craft hubs with fair-trade market access.',
-        'সেলাই ও হস্তশিল্পের মাধ্যমে গ্রামীণ নারীদের আত্মনির্ভরশীল করে তোলা।'
+        'Distributing Iftar among orphan students during the holy month of Ramadan.',
+        'পবিত্র মাহে রমজান উপলক্ষ্যে এতিমদের মাঝে সিজিএফডব্লিউএ কর্তৃক ইফতার বিতরণ কর্মসূচি।'
       ),
-      image: 'https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?auto=format&fit=crop&w=2000&q=80',
-      link: '/programs/women-artisans-livelihood'
-    }];
+      image: 'https://res.cloudinary.com/armmzmyq/image/upload/v1787248269/cgfwa/compressed_1787248267862_DSC_2978_mp5tlt.jpg',
+      link: '/activities/welfare-programs/iftar-distribution'
+    },
+    {
+      title: t(
+        'CGFWA Raising Day',
+        'সিজিএফডব্লিউএ রেইজিং ডে'
+      ),
+      desc: t(
+        'Celebrating the founding anniversary and the continued legacy of the Coast Guard Family Welfare Association.',
+        'বাংলাদেশ কোস্ট গার্ড পরিবার কল্যাণ সংঘের প্রতিষ্ঠাবার্ষিকী ও অবিরাম পথচলা উদযাপন।'
+      ),
+      image: 'https://res.cloudinary.com/armmzmyq/image/upload/v1787248271/cgfwa/compressed_1787248269824_DSC_3660_grr0qs.jpg',
+      link: '/about'
+    }
+  ];
 
   // Auto-play for Hero Carousel
   useEffect(() => {
@@ -74,10 +89,13 @@ export function HeroSection() {
           {/* Subtle gradient to ensure text readability at the bottom left */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent z-10" />
-          <img
+          <Image
             src={story.image}
             alt={story.title}
-            className="w-full h-full object-cover"
+            fill={true}
+            priority={idx === 0}
+            sizes="100vw"
+            className="object-cover"
           />
         </div>
       ))}

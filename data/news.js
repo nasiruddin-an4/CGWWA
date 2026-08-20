@@ -10,7 +10,7 @@ export const newsArticles= [
     author: 'Information & Public Relations Wing',
     excerpt: 'An annual merit stipend distribution ceremony was held at Patuakhali District Auditorium under the Coastal Education Support Project.',
     excerptBn: 'পটুয়াখালী জেলা মিলনায়তনে উপকূলীয় শিক্ষা সহায়তা প্রকল্পের আওতায় মেধা উপবৃত্তি প্রদান অনুষ্ঠান অনুষ্ঠিত হয়।',
-    featuredImage: '/images/programs-placeholder.png',
+    featuredImage: 'https://res.cloudinary.com/armmzmyq/image/upload/v1787248725/cgfwa/programs-placeholder_rymijf.jpg',
     isImportant: true,
     tags: ['Education', 'Scholarship', 'Patuakhali', 'Barisal'],
     content: [
@@ -41,7 +41,7 @@ export const newsArticles= [
     author: 'Medical & Disaster Response Cell',
     excerpt: 'Over 1,800 islanders received free specialized treatment, essential medicines, and emergency survival kits during the day-long medical camp in Moheshkhali.',
     excerptBn: 'মহেশখালীতে দিনব্যাপী সুচিকিৎসা, জরুরি ফ্রি ওষুধ ও উদ্ধার প্রস্তুত উপকরণ বিতরণ করা হয়।',
-    featuredImage: '/images/programs-placeholder.png',
+    featuredImage: 'https://res.cloudinary.com/armmzmyq/image/upload/v1787248725/cgfwa/programs-placeholder_rymijf.jpg',
     isImportant: true,
     tags: ['Healthcare', 'Medical Camp', 'Moheshkhali', 'Disaster Preparedness'],
     content: [
@@ -70,7 +70,7 @@ export const newsArticles= [
     author: 'Women Welfare & Micro-Livelihoods Division',
     excerpt: 'Handmade jute crafts, traditional nakshi kantha, and sustainable coastal bamboo goods crafted by 800 trained women artisans showcased at Dhaka Expo.',
     excerptBn: 'ঢাকার আন্তর্জাতিক বাণিজ্য মেলায় ৮০০ জন উপকূলীয় নারী কারিগরের তৈরি নকশী কাঁথা ও পাটজাত পণ্য প্রদর্শনী।',
-    featuredImage: '/images/programs-placeholder.png',
+    featuredImage: 'https://res.cloudinary.com/armmzmyq/image/upload/v1787248725/cgfwa/programs-placeholder_rymijf.jpg',
     isImportant: false,
     tags: ['Women Empowerment', 'Handicrafts', 'Micro-Livelihood', 'Dhaka'],
     content: [
@@ -99,7 +99,7 @@ export const newsArticles= [
     author: 'Engineering & Environment Wing',
     excerpt: 'Four high-capacity solar desalination units now provide 40,000 liters of pure drinking water daily to salinity-affected coastal villagers.',
     excerptBn: 'লবণাক্ততা কবলিত শ্যামনগরের চার গ্রামে প্রতিদিন ৪০,০০০ লিটার সুপেয় পানি নিশ্চিত করতে সৌর শোধন প্ল্যান্ট চালুকরণ।',
-    featuredImage: '/images/programs-placeholder.png',
+    featuredImage: 'https://res.cloudinary.com/armmzmyq/image/upload/v1787248725/cgfwa/programs-placeholder_rymijf.jpg',
     isImportant: false,
     tags: ['Clean Water', 'Salinity', 'Shyamnagar', 'Solar Energy'],
     content: [
@@ -128,7 +128,7 @@ export const newsArticles= [
     author: 'Executive Board Secretariat',
     excerpt: 'The General Council approved key operational plans including deep-sea fishermen safety gear, widow pension schemes, and educational infrastructure expansion.',
     excerptBn: 'জেনারেল কাউন্সিল আগামী অর্থবছরের গুরুত্বপূর্ণ কল্যাণ পরিকল্পনা ও বাজেট সর্বসম্মতিক্রমে অনুমোদন করেছে।',
-    featuredImage: '/images/programs-placeholder.png',
+    featuredImage: 'https://res.cloudinary.com/armmzmyq/image/upload/v1787248725/cgfwa/programs-placeholder_rymijf.jpg',
     isImportant: false,
     tags: ['Annual Council', 'Budget', 'Governance', 'Dhaka'],
     content: [
@@ -157,7 +157,7 @@ export const newsArticles= [
     author: 'Eco-Resilience & Forestry Wing',
     excerpt: 'Community volunteers and local students united to plant protective green embankments along vulnerable riverbanks in Bhola and Lakshmipur.',
     excerptBn: 'ভোলা ও লক্ষ্মীপুরে নদীর তীরবর্তী রিং-বাঁধে ম্যানগ্রোভ চারা রোপণ করে সবুজ বেষ্টনী গড়ে তোলা হলো।',
-    featuredImage: '/images/programs-placeholder.png',
+    featuredImage: 'https://res.cloudinary.com/armmzmyq/image/upload/v1787248725/cgfwa/programs-placeholder_rymijf.jpg',
     isImportant: false,
     tags: ['Mangrove', 'Environment', 'Bhola', 'Meghna Estuary'],
     content: [

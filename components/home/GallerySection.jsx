@@ -1,7 +1,9 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { MapPin, Eye, X } from 'lucide-react';
+import React from 'react';
+import { Eye } from 'lucide-react';
+import Link from 'next/link';
+import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 import { SectionHeader } from '@/components/SectionHeader';
 import { Button } from '@/components/Button';
@@ -11,16 +13,6 @@ import { useScrollReveal } from '@/hooks/useScrollReveal';
 export function GallerySection() {
   const { language, t } = useLanguage();
   const observe = useScrollReveal();
-  const [activeModalImage, setActiveModalImage] = useState(null);
-
-  // Close modal on Escape
-  useEffect(() => {
-    const handleEsc = (e) => {
-      if (e.key === 'Escape') setActiveModalImage(null);
-    };
-    window.addEventListener('keydown', handleEsc);
-    return () => window.removeEventListener('keydown', handleEsc);
-  }, []);
 
   return (
     <>
@@ -31,10 +23,10 @@ export function GallerySection() {
         {/* Section Header */}
         <div className="relative z-10 border-b border-slate-200 pb-7 mb-8">
           <SectionHeader
-            title="Photo Records of Operations & Field Services"
-            titleBn="চিত্রপট: জনসেবা, চিকিৎসা ও উপকূলীয় কার্যক্রম"
-            subtitle="Documenting mobile healthcare fleets, scholarship distribution ceremonies, and disaster relief operations across Bangladesh."
-            subtitleBn="কোস্ট গার্ড ওয়েলফেয়ার অ্যাসোসিয়েশনের বিভিন্ন স্বাস্থ্যসেবা, শিক্ষা বৃত্তি প্রদান এবং ত্রাণ বিতরণ কর্মসূচির দৃশ্যপট।"
+            title="Photo Gallery"
+            titleBn="ফটো গ্যালারি"
+            subtitle="Explore our visual journey of community engagement, training programs, and welfare activities."
+            subtitleBn="কোস্ট গার্ড ওয়েলফেয়ার অ্যাসোসিয়েশনের বিভিন্ন কর্মসূচির দৃশ্যপট অন্বেষণ করুন।"
             lightText={false}
             className="!mb-0 [&>h2]:!mb-0"
             centered={true}
@@ -44,18 +36,21 @@ export function GallerySection() {
         {/* Clean Masonry Gallery Grid */}
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 space-y-5 relative z-10">
           {photoGallery.slice(0, 6).map((p, idx) => (
-            <div
+            <Link
+              href={p.link}
               key={p.id}
               ref={observe}
               data-reveal-delay={(idx + 1) * 100}
-              className="reveal-up relative break-inside-avoid rounded-md overflow-hidden group/thumb cursor-pointer border border-slate-200 bg-slate-50 shadow-lg"
-              onClick={() => setActiveModalImage(p)}>
+              className="reveal-up relative break-inside-avoid rounded-md overflow-hidden group/thumb cursor-pointer border border-slate-200 bg-slate-50 shadow-lg block">
 
-              <img
+              <Image
                 src={p.url}
                 alt={p.title}
-                className="w-full h-auto object-cover group-hover/thumb:scale-105 transition-transform duration-700 opacity-90 group-hover/thumb:opacity-100"
-                loading="lazy"
+                width={800}
+                height={600}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                style={{ width: '100%', height: 'auto' }}
+                className="group-hover/thumb:scale-105 transition-transform duration-700 opacity-90 group-hover/thumb:opacity-100"
               />
 
               {/* Subtle hover overlay without text */}
@@ -64,7 +59,7 @@ export function GallerySection() {
                   <Eye className="w-6 h-6" />
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
@@ -75,45 +70,6 @@ export function GallerySection() {
           </Button>
         </div>
       </section>
-
-      {/* ═══════════════════ IMAGE LIGHTBOX MODAL ═══════════════════ */}
-      {activeModalImage &&
-        <div
-          className="lightbox-overlay fixed inset-0 z-50 bg-black/85 backdrop-blur-sm p-4 flex items-center justify-center"
-          onClick={() => setActiveModalImage(null)}>
-
-          <div
-            className="lightbox-content bg-slate-900 rounded-md max-w-3xl w-full p-4 border border-white/15 space-y-3 relative text-white"
-            onClick={(e) => e.stopPropagation()}>
-
-            <button
-              onClick={() => setActiveModalImage(null)}
-              className="absolute top-4 right-4 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors duration-200 z-10">
-
-              <X className="w-5 h-5" />
-            </button>
-
-            <img
-              src={activeModalImage.url}
-              alt={activeModalImage.title}
-              className="w-full max-h-[70vh] object-contain rounded-md" />
-
-            <div className="p-2 space-y-1.5">
-              <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-wider">
-                {activeModalImage.category}
-              </span>
-              <h4 className="font-semibold text-lg">
-                {language === 'bn' ? activeModalImage.titleBn : activeModalImage.title}
-              </h4>
-              {(activeModalImage.description || activeModalImage.descriptionBn) &&
-                <p className="text-xs text-slate-300">
-                  {language === 'bn' ? activeModalImage.descriptionBn : activeModalImage.description}
-                </p>
-              }
-            </div>
-          </div>
-        </div>
-      }
     </>
   );
 }

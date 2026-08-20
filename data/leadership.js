@@ -1,289 +1,183 @@
-
-export const chairmanInfo= {
-  id: 'ldr-001',
-  slug: 'chairman-message',
-  name: 'Rear Admiral M. Rafiqul Islam (Retd.)',
-  nameBn: 'রিয়ার অ্যাডমিরাল এম রফিকুল ইসলাম (অবঃ)',
-  designation: 'Chairman, Board of Governors',
-  designationBn: 'চেয়ারম্যান, পরিচালনা পর্ষদ',
-  photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80',
+export const presidentInfo = {
+  id: 'ldr-president',
+  slug: 'president-message',
+  name: 'Farhana Begum',
+  nameBn: 'ফারহানা বেগম',
+  designation: 'President, CGFWA',
+  designationBn: 'প্রেসিডেন্ট, সিজিএফডব্লিউএ',
+  photo: 'https://res.cloudinary.com/armmzmyq/image/upload/v1787247225/cgfwa/WhatsApp_Image_2024-11-02_at_20.23.54_1890a595_p0yedm.jpg',
   isCurrentLeadership: true,
   bio: [
-    'Rear Admiral M. Rafiqul Islam (Retd.) served with distinction for over 36 years in naval command, coastal defense operations, and maritime policy formulation.',
-    'He holds a Master’s Degree in Defense Studies from National Defence College and has represented Bangladesh in international maritime welfare forums in Geneva and Singapore.',
-    'Under his leadership, CGFWA modernized its emergency disaster volunteer force and launched digital micro-grants for coastal women entrepreneurs.'
+    'Farhana Begum assumed charge as the 15th President of the Bangladesh Coast Guard Family Welfare Association (CGFWA) on October 31, 2024.',
+    'She holds Honours in Textile Science from Home Economics College and an MBA in HRM from Chittagong Islamic University.',
+    'She previously served in Chittagong BNFWA Shishu Niketan School, Chittagong Ladies Club, Kaptai BNFWA, Kaptai Ladies Club, and Dhaka Ladies Club, and most recently as Vice President of the Handicrafts Department in the BNFWA Central Committee.',
+    'In her personal life, she married Rear Admiral Ziaul Haque, Director General of Bangladesh Coast Guard, in 2001. She is the mother of three children (two sons, one daughter) and enjoys designing clothes and jewelry as a hobby.'
   ],
   bioBn: [
-    'রিয়ার অ্যাডমিরাল এম রফিকুল ইসলাম (অবঃ) বাংলাদেশ নৌবাহিনী ও সামুদ্রিক সেবায় দীর্ঘ ৩৬ বছর নিষ্ঠার সাথে দায়িত্ব পালন করেছেন।',
-    'তিনি ন্যাশনাল ডিফেন্স কলেজ থেকে মাস্টার্স ডিগ্রি লাভ করেন এবং আন্তর্জাতিক সামুদ্রিক কল্যাণ ফোরামে বাংলাদেশের প্রতিনিধিত্ব করেছেন।'
+    'ফারহানা বেগম ৩১ অক্টোবর ২০২৪ তারিখে বাংলাদেশ কোস্ট গার্ড পরিবার কল্যাণ সংঘের (সিজিএফডব্লিউএ) ১৫তম প্রেসিডেন্ট হিসেবে দায়িত্ব গ্রহণ করেন।',
+    'তিনি গার্হস্থ্য অর্থনীতি কলেজ থেকে টেক্সটাইল সায়েন্সে অনার্স এবং চট্টগ্রাম ইসলামী বিশ্ববিদ্যালয় থেকে এইচআরএম-এ এমবিএ ডিগ্রি অর্জন করেন।',
+    'এর পূর্বে তিনি চট্টগ্রাম বিএনএফডব্লিউএ শিশু নিকেতন স্কুল, চট্টগ্রাম লেডিস ক্লাব, কাপ্তাই বিএনএফডব্লিউএ, কাপ্তাই লেডিস ক্লাব এবং ঢাকা লেডিস ক্লাবে দায়িত্ব পালন করেছেন। সম্প্রতি তিনি বিএনএফডব্লিউএ কেন্দ্রীয় কমিটির হস্তশিল্প বিভাগের ভাইস প্রেসিডেন্ট হিসেবে দায়িত্ব পালন করেন।',
+    'ব্যক্তিগত জীবনে তিনি ২০০১ সালে বাংলাদেশ কোস্ট গার্ডের মহাপরিচালক রিয়ার অ্যাডমিরাল জিয়াউল হককে বিয়ে করেন। তিনি তিন সন্তানের জননী এবং শখ হিসেবে পোশাক ও গহনার নকশা করতে পছন্দ করেন।'
   ],
-  messageTitle: 'Serving Coastal Bangladesh with Dignity, Resilience & Purpose',
-  messageTitleBn: 'মর্যাদা, সহনশীলতা ও মহান উদ্দেশ্যে উপকূলীয় বাংলাদেশের সেবা',
-  quote: 'Our commitment is to ensure that no coastal child drops out of school and no fisherman’s family goes helpless when storm clouds gather over the Bay of Bengal.',
-  quoteBn: 'আমাদের সংকল্প - বঙ্গোপসাগরে যখন মেঘ জমে, তখন যেন কোনো উপকূলীয় শিশু স্কুল থেকে ছিটকে না পড়ে এবং কোনো জেলে পরিবার যেন অসহায় বোধ না করে।',
+  messageTitle: 'Empowering Families, Enriching the Coast',
+  messageTitleBn: 'পরিবারের ক্ষমতায়ন, উপকূলের উন্নয়ন',
+  quote: 'Our commitment is to empower every Coast Guard family and stand by our coastal communities with resilience and care.',
+  quoteBn: 'আমাদের প্রতিশ্রুতি হলো প্রতিটি কোস্ট গার্ড পরিবারের ক্ষমতায়ন এবং আমাদের উপকূলীয় সম্প্রদায়ের পাশে দৃঢ়তা ও যত্নের সাথে দাঁড়ানো।',
   fullMessage: [
-    'Distinguished Citizens, Patrons, and Volunteers,',
-    'It is a profound privilege to address you on behalf of the Coast Guard Family Welfare Association (CGFWA). Bangladesh’s 710-kilometer coastline is home to nearly 35 million resilient citizens who stand on the front lines of climate vulnerability, riverbank erosion, and seasonal cyclonic surges.',
-    'Since our inception in 1998, CGFWA has remained committed to translating goodwill into institutional empowerment. We believe that true coastal welfare is not merely emergency relief distribution; it is building permanent human capability.',
-    'Over the past fiscal year, our flagship initiatives reached over 450,000 citizens across 64 districts. Through our Coastal Education & Merit Scholarship Program, thousands of children of fishermen and low-income families are pursuing higher degrees in universities.',
-    'Our Mobile Medical Fleet continues to navigate remote estuaries, bringing specialized doctors, maternal healthcare, and life-saving medicines directly to island unions in Patuakhali, Bhola, and Satkhira.',
-    'As we look toward the future, we are leveraging digital governance, solar desalination infrastructure, and satellite-enabled disaster safety beacons. I express my deepest gratitude to our volunteers, advisory bodies, and partner institutions whose unwavering support empowers us to serve Bangladesh.',
-    'May Bangladesh prosper in peace, unity, and resilience.'
+    'Distinguished Members, Families, and Well-wishers,',
+    'It is a profound privilege to address you as the President of the Bangladesh Coast Guard Family Welfare Association (CGFWA). Since assuming this role, my vision has been to strengthen the bonds within our Coast Guard families while simultaneously expanding our outreach to the vulnerable coastal communities of Bangladesh.',
+    'Through our various initiatives—ranging from education and vocational training to healthcare and disaster relief—we are not just providing immediate assistance; we are building sustainable futures. Our women empowerment programs, such as the sewing and handicraft training, aim to make our rural women self-reliant.',
+    'I express my deepest gratitude to all our committee members, regional chairmen, and volunteers. Your dedication is the true driving force behind CGFWA. Together, we will continue to serve our families and our nation with unwavering commitment.',
+    'May the Almighty bless us all.'
   ],
   fullMessageBn: [
-    'সুপ্রিয় দেশবাসী, সুধীমণ্ডলী ও সম্মানীয় সদস্যবৃন্দ,',
-    'বাংলাদেশ উপকূল ও সমাজ কল্যাণ সংস্থার (বিসিসিডব্লিউএ) পক্ষ থেকে আপনাদের আন্তরিক শুভেচ্ছা জ্ঞাপন করছি। বাংলাদেশের ৭১০ কিলোমিটার দীর্ঘ সুপ্রশস্ত উপকূলীয় অঞ্চল প্রায় সাড়ে তিন কোটি অদম্য মানুষের বাসস্থান।',
-    '১৯৯৮ সালে প্রতিষ্ঠার পর থেকে আমাদের লক্ষ্য শুধুমাত্র সাময়িক ত্রাণ বিতরণেই সীমাবদ্ধ নয়; বরং টেকসই মানবোন্নয়ন ও স্বাবলম্বী সমাজ বিনির্মাণ করাই আমাদের মূল অঙ্গীকার।',
-    'বিগত অর্থবছরে আমাদের মূল প্রকল্পসমূহ দেশের ৬৪টি জেলায় ৪ লক্ষ ৫০ হাজারের বেশি মানুষের দ্বারপ্রান্তে পৌঁছেছে। আমরা বিশ্বাস করি, সমন্বিত প্রয়াসের মাধ্যমেই বঙ্গোপসাগরের উপকূলীয় অঞ্চলকে একটি নিরাপদ, সমৃদ্ধ ও স্বাবলম্বী অঞ্চলে রূপান্তর করা সম্ভব।'
+    'সুপ্রিয় সদস্যবৃন্দ, পরিবারবর্গ এবং শুভানুধ্যায়ীগণ,',
+    'বাংলাদেশ কোস্ট গার্ড পরিবার কল্যাণ সংঘের (সিজিএফডব্লিউএ) প্রেসিডেন্ট হিসেবে আপনাদের উদ্দেশ্যে কিছু বলতে পারা আমার জন্য অত্যন্ত সম্মানের। এই দায়িত্ব গ্রহণের পর থেকে আমার দৃষ্টিভঙ্গি হলো আমাদের কোস্ট গার্ড পরিবারের মধ্যকার বন্ধনকে আরও সুদৃঢ় করা এবং একইসাথে বাংলাদেশের উপকূলীয় সম্প্রদায়ের কল্যাণে আমাদের কার্যক্রম সম্প্রসারণ করা।',
+    'আমাদের বিভিন্ন উদ্যোগ—শিক্ষা ও কারিগরি প্রশিক্ষণ থেকে শুরু করে স্বাস্থ্যসেবা এবং দুর্যোগ ত্রাণ—এর মাধ্যমে আমরা কেবল তাৎক্ষণিক সহায়তাই প্রদান করছি না; আমরা টেকসই ভবিষ্যৎ নির্মাণ করছি। আমাদের নারী ক্ষমতায়ন কর্মসূচি, যেমন সেলাই ও হস্তশিল্প প্রশিক্ষণ, গ্রামীণ নারীদের স্বাবলম্বী করার লক্ষ্য নিয়ে পরিচালিত হচ্ছে।',
+    'আমি আমাদের সকল কমিটির সদস্য, আঞ্চলিক চেয়ারম্যান এবং স্বেচ্ছাসেবকদের প্রতি গভীর কৃতজ্ঞতা প্রকাশ করছি। আপনাদের নিষ্ঠাই সিজিএফডব্লিউএ-এর প্রকৃত চালিকাশক্তি। আমরা একসাথে আমাদের পরিবার এবং জাতির সেবায় অবিচল থাকব।',
+    'মহান আল্লাহ আমাদের সহায় হোন।'
   ]
 };
 
-export const directorInfo= {
-  id: 'ldr-002',
-  slug: 'director-message',
-  name: 'Commodore Farhana Yasmin, ndc',
-  nameBn: 'কমোডর ফারহানা ইয়াসমিন, এনডিসি',
-  designation: 'Director General & Chief Executive Officer',
-  designationBn: 'মহাপরিচালক ও প্রধান নির্বাহী কর্মকর্তা',
-  photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80',
-  isCurrentLeadership: true,
-  bio: [
-    'Commodore Farhana Yasmin brings over 28 years of administrative excellence, public policy execution, and humanitarian mission management.',
-    'She pioneered the Women Artisans & Micro-Livelihood Project (WAML), empowering over 18,500 rural women across Southern Bangladesh.'
-  ],
-  bioBn: [
-    'কমোডর ফারহানা ইয়াসমিন ২৮ বছরেরও বেশি সময় ধরে প্রশাসনিক দক্ষতা ও সামুদ্রিক কল্যাণ কার্যক্রমে নেতৃত্ব দিয়ে আসছেন।'
-  ],
-  messageTitle: 'Efficiency, Integrity & Rapid Field Execution',
-  messageTitleBn: 'দক্ষতা, একনিষ্ঠতা ও দ্রুত মাঠপর্যায়ের বাস্তবায়ন',
-  quote: 'Every taka entrusted to CGFWA is converted into tangible, auditable relief and long-term empowerment for coastal communities.',
-  quoteBn: 'সিজিএফডব্লিউএ-তে অর্পিত প্রতিটি সম্পদ উপকূলীয় জনগোষ্ঠীর প্রত্যক্ষ কল্যাণে স্বচ্ছতার সাথে ব্যয় করা হয়।',
-  fullMessage: [
-    'Assalamu Alaikum and Warm Greetings,',
-    'At the executive Directorate of CGFWA, our focus is unwavering: operational excellence, speed in emergency response, and radical transparency in welfare delivery.',
-    'In 2026, we expanded our physical footprint to cover 120 emergency health camps, distributed BDT 8.5 Crore in fishermen bereavement grants, and established 45 vocational handloom hubs.',
-    'Our administrative structure ensures that 92% of operational expenditures go directly to beneficiary programs. Through our integrated digital portal, every scholarship applicant and relief claimant can track their application status seamlessly.',
-    'We welcome collaboration with national and international welfare bodies as we strive to build a safer, smarter coastal Bangladesh.'
-  ],
-  fullMessageBn: [
-    'আসসালামু আলাইকুম,',
-    'সিজিএফডব্লিউএ মহাপরিচালকের দপ্তরে আমাদের প্রথম লক্ষ্য - দ্রুত সাড়া প্রদান, প্রশাসনিক স্বচ্ছতা ও বস্তুনিষ্ঠ মাঠপর্যায়ের বাস্তবায়ন।',
-    'আমাদের ডিজিটাল সিস্টেমের মাধ্যমে সাহায্যপ্রার্থী প্রতিটি পরিবার স্বচ্ছতার সাথে তাদের আবেদন পরিস্থিতি ট্র্যাক করতে পারছেন।'
-  ]
-};
-
-export const leadershipTeam= [
+export const centralCommittee = [
   {
-    id: "ldr-003",
-    slug: "dir-admin",
-    name: "Captain Dr. S. M. Tanveer Hossain",
-    nameBn: "ক্যাপ্টেন ড. এস এম তানভীর হোসেন",
-    designation: "Director (Administration & Finance)",
-    designationBn: "পরিচালক (প্রশাসন ও অর্থ)",
-    photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80",
-    bio: ["Specializes in public finance auditing, resource planning, and institutional logistics."],
-    bioBn: ["প্রশাসনিক ব্যবস্থাপনা ও অর্থ মন্ত্রণালয় নিরীক্ষা সমন্বয় বিশেষজ্ঞ।"]
+    id: "cc-01",
+    name: "Farhana Begum",
+    nameBn: "ফারহানা বেগম",
+    designation: "President",
+    designationBn: "প্রেসিডেন্ট",
+    photo: "https://res.cloudinary.com/armmzmyq/image/upload/v1787247226/cgfwa/becuddhljjltqy9hdh79.jpg"
   },
   {
-    id: "ldr-004",
-    slug: "dir-field",
-    name: "Dr. Shahana Parveen",
-    nameBn: "ড. শাহানা পারভীন",
-    designation: "Director (Healthcare & Field Operations)",
-    designationBn: "পরিচালক (স্বাস্থ্যসেবা ও মাঠ কার্যক্রম)",
-    photo: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80",
-    bio: ["Senior Epidemiologist heading the 6 specialized mobile watercraft medical units."],
-    bioBn: ["উপকূলীয় মোবাইল মেডিকেল ওয়াটার বহর প্রধান ও প্রবীণ সামাজিক স্বাস্থ্য বিশেষজ্ঞ।"]
+    id: "cc-02",
+    name: "Sajida Haque",
+    nameBn: "সাজিদা হক",
+    designation: "Vice President",
+    designationBn: "ভাইস প্রেসিডেন্ট",
+    photo: "https://res.cloudinary.com/armmzmyq/image/upload/v1787247226/cgfwa/bb9wglitoe2rvanjfuid.jpg"
   },
   {
-    id: "ldr-005",
-    slug: "dir-education",
-    name: "Prof. Anisur Rahman",
-    nameBn: "অধ্যাপক আনিসুর রহমান",
-    designation: "Director (Education & Vocational Training)",
-    designationBn: "পরিচালক (শিক্ষা ও বৃত্তিমূলক প্রশিক্ষণ)",
-    photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=800&q=80",
-    bio: ["Former Dean of Social Sciences, overseeing scholarships and youth training curricula."],
-    bioBn: ["সাবেক সামাজিক বিজ্ঞান অনুষদ প্রধান ও যুব উপবৃত্তি কারিকুলাম সমন্বয়ক।"]
+    id: "cc-03",
+    name: "Jannatul Ferdousi Haque",
+    nameBn: "জান্নাতুল ফেরদৌসী হক",
+    designation: "General Secretary",
+    designationBn: "সাধারণ সচিব",
+    photo: "https://res.cloudinary.com/armmzmyq/image/upload/v1787247227/cgfwa/kukyatbafzlp7utt0xaq.jpg"
   },
   {
-    id: "ldr-006",
-    slug: "dir-disaster",
-    name: "Cmdr. A. K. M. Jahangir Alam",
-    nameBn: "কম্যান্ডার এ কে এম জাহাঙ্গীর আলম",
-    designation: "Director (Disaster Response & Volunteer Corps)",
-    designationBn: "পরিচালক (দুর্যোগ ব্যবস্থাপনা ও স্বেচ্ছাসেবক দল)",
-    photo: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=80",
-    bio: ["Directs 12,500 trained youth volunteers in emergency evacuation and relief operations."],
-    bioBn: ["১২,৫০০ উপকূলীয় উদ্ধারকর্মী ও জরুরি ত্রান সংকেত বাহক সমন্বয়কারী।"]
+    id: "cc-04",
+    name: "Fatema Akter",
+    nameBn: "ফাতেমা আক্তার",
+    designation: "Member",
+    designationBn: "সদস্য",
+    photo: "https://res.cloudinary.com/armmzmyq/image/upload/v1787247229/cgfwa/fmdmzg26bjf7wlujtz24.jpg"
   },
   {
-    id: "ldr-007",
-    slug: "dir-medical",
-    name: "Dr. Kazi Arif",
-    nameBn: "ড. কাজী আরিফ",
-    designation: "Director (Medical Grants & Facilities)",
-    designationBn: "পরিচালক (চিকিৎসা অনুদান ও সুবিধা)",
-    photo: "/images/about-placeholder.png",
-    bio: ["Oversees medical relief funds and hospital partnerships for coastal families."],
-    bioBn: ["উপকূলীয় পরিবারের জন্য চিকিৎসা ত্রাণ তহবিল এবং হাসপাতাল অংশীদারিত্ব তদারকি করেন।"]
+    id: "cc-05",
+    name: "Tamanna Mehedi",
+    nameBn: "তামান্না মেহেদী",
+    designation: "Secretary (Education)",
+    designationBn: "সচিব (শিক্ষা)",
+    photo: "https://res.cloudinary.com/armmzmyq/image/upload/v1787247230/cgfwa/obkf9hhdp9l1nypcta1m.jpg"
   },
   {
-    id: "ldr-008",
-    slug: "dir-security",
-    name: "Captain Humayun Kabir",
-    nameBn: "ক্যাপ্টেন হুমায়ুন কবির",
-    designation: "Director (Coastal Security Coordination)",
-    designationBn: "পরিচালক (উপকূলীয় নিরাপত্তা সমন্বয়)",
-    photo: "/images/about-placeholder.png",
-    bio: ["Liaises with national security agencies to ensure safe fishing environments."],
-    bioBn: ["নিরাপদ মাছ ধরার পরিবেশ নিশ্চিত করতে জাতীয় নিরাপত্তা সংস্থার সাথে সমন্বয় করেন।"]
+    id: "cc-06",
+    name: "Tanjina Sultana",
+    nameBn: "তানজিনা সুলতানা",
+    designation: "Member",
+    designationBn: "সদস্য",
+    photo: "https://res.cloudinary.com/armmzmyq/image/upload/v1787247230/cgfwa/rvdlu8tn5c7eaeeecorb.jpg"
   },
   {
-    id: "ldr-009",
-    slug: "dir-women",
-    name: "Commodore Nasreen Akter",
-    nameBn: "কমোডর নাসরিন আক্তার",
-    designation: "Director (Women Empowerment Programs)",
-    designationBn: "পরিচালক (নারী ক্ষমতায়ন কর্মসূচি)",
-    photo: "/images/about-placeholder.png",
-    bio: ["Leads micro-finance initiatives for women entrepreneurs in coastal districts."],
-    bioBn: ["উপকূলীয় জেলাগুলোতে নারী উদ্যোক্তাদের জন্য ক্ষুদ্র-অর্থায়ন উদ্যোগ পরিচালনা করেন।"]
-  },
-  {
-    id: "ldr-010",
-    slug: "dir-relief",
-    name: "Dr. M. A. Hasan",
-    nameBn: "ড. এম এ হাসান",
-    designation: "Director (Disaster Relief Fund)",
-    designationBn: "পরিচালক (দুর্যোগ ত্রাণ তহবিল)",
-    photo: "/images/about-placeholder.png",
-    bio: ["Manages the rapid disbursement of relief funds during cyclonic emergencies."],
-    bioBn: ["ঘূর্ণিঝড়ের জরুরি অবস্থায় দ্রুত ত্রাণ তহবিল বিতরণের ব্যবস্থাপনা করেন।"]
-  },
-  {
-    id: "ldr-011",
-    slug: "dir-infrastructure",
-    name: "Captain Shafiqur Rahman",
-    nameBn: "ক্যাপ্টেন শফিকুর রহমান",
-    designation: "Director (Infrastructure Development)",
-    designationBn: "পরিচালক (অবকাঠামো উন্নয়ন)",
-    photo: "/images/about-placeholder.png",
-    bio: ["Supervises the construction of cyclone shelters and community clinics."],
-    bioBn: ["ঘূর্ণিঝড় আশ্রয়কেন্দ্র এবং কমিউনিটি ক্লিনিক নির্মাণের তদারকি করেন।"]
-  },
-  {
-    id: "ldr-012",
-    slug: "dir-youth",
-    name: "Prof. Laila Zaman",
-    nameBn: "অধ্যাপক লায়লা জামান",
-    designation: "Director (Youth & Cultural Affairs)",
-    designationBn: "পরিচালক (যুব ও সংস্কৃতি বিষয়ক)",
-    photo: "/images/about-placeholder.png",
-    bio: ["Promotes coastal heritage and organizes youth leadership symposiums."],
-    bioBn: ["উপকূলীয় ঐতিহ্য প্রচার এবং যুব নেতৃত্ব সিম্পোজিয়াম আয়োজন করেন।"]
+    id: "cc-07",
+    name: "Lt Maria Marzan Meem, (S), BN",
+    nameBn: "লেঃ মারিয়া মার্জান মীম, (এস), বিএন",
+    designation: "Treasurer",
+    designationBn: "কোষাধ্যক্ষ",
+    photo: "https://res.cloudinary.com/armmzmyq/image/upload/v1787247231/cgfwa/rxvqresvw5ga7xmvzad8.jpg"
   }
 ];
 
-export const formerLeaders = [
+export const zoneChairmen = [
   {
-    id: "fldr-01",
-    name: "Rear Admiral Golam Sarwar (Retd.)",
-    nameBn: "রিয়ার অ্যাডমিরাল গোলাম সারওয়ার (অবঃ)",
-    designation: "Former Chairman",
-    designationBn: "সাবেক চেয়ারম্যান",
-    startDate: "2018",
-    endDate: "2023",
-    photo: "/images/about-placeholder.png"
+    id: "zc-01",
+    name: "Farhana Begum",
+    nameBn: "ফারহানা বেগম",
+    designation: "President & Chief Patron",
+    designationBn: "প্রেসিডেন্ট ও প্রধান পৃষ্ঠপোষক",
+    photo: "https://res.cloudinary.com/armmzmyq/image/upload/v1787247232/cgfwa/mvhfqnqhsadw2lbsyvig.jpg"
   },
   {
-    id: "fldr-02",
-    name: "Commodore Shamsul Huda (Retd.)",
-    nameBn: "কমোডর শামসুল হুদা (অবঃ)",
-    designation: "Former Director General",
-    designationBn: "সাবেক মহাপরিচালক",
-    startDate: "2015",
-    endDate: "2020",
-    photo: "/images/about-placeholder.png"
+    id: "zc-02",
+    name: "Dr. Zakia Sultana",
+    nameBn: "ডা. জাকিয়া সুলতানা",
+    designation: "Regional Chairman, Dhaka Zone",
+    designationBn: "আঞ্চলিক চেয়ারম্যান, সিজিএফডব্লিউএ ঢাকা",
+    photo: "https://res.cloudinary.com/armmzmyq/image/upload/v1787248366/cgfwa/hgywcqyxtlf2ojia2mva.jpg"
   },
   {
-    id: "fldr-03",
-    name: "Rear Admiral Tareq Hassan (Retd.)",
-    nameBn: "রিয়ার অ্যাডমিরাল তারেক হাসান (অবঃ)",
-    designation: "Former Chairman",
-    designationBn: "সাবেক চেয়ারম্যান",
-    startDate: "2013",
-    endDate: "2018",
-    photo: "/images/about-placeholder.png"
+    id: "zc-03",
+    name: "Mafruha Azad Tanzi",
+    nameBn: "মাফরুহা আজাদ তানজি",
+    designation: "Regional Chairman, BCG Ladies Club Dhaka",
+    designationBn: "আঞ্চলিক চেয়ারম্যান, বিসিজি লেডিস ক্লাব ঢাকা",
+    photo: "https://res.cloudinary.com/armmzmyq/image/upload/v1787247236/cgfwa/oa5katv4h9ingsecslr1.jpg"
   },
   {
-    id: "fldr-04",
-    name: "Captain Reazul Kabir",
-    nameBn: "ক্যাপ্টেন রিয়াজুল কবির",
-    designation: "Former Director General",
-    designationBn: "সাবেক মহাপরিচালক",
-    startDate: "2010",
-    endDate: "2015",
-    photo: "/images/about-placeholder.png"
+    id: "zc-04",
+    name: "Kamrun Nahar",
+    nameBn: "কামরুন নাহার",
+    designation: "Regional Chairman, Agrajatra sub-branch",
+    designationBn: "আঞ্চলিক চেয়ারম্যান, অগ্রযাত্রা উপশাখা",
+    photo: "https://res.cloudinary.com/armmzmyq/image/upload/v1787247234/cgfwa/2_m3gk6r.jpg"
   },
   {
-    id: "fldr-05",
-    name: "Commodore Sayed M. Monzur",
-    nameBn: "কমোডর সৈয়দ এম মনজুর",
-    designation: "Former Director (Admin)",
-    designationBn: "সাবেক পরিচালক (প্রশাসন)",
-    startDate: "2014",
-    endDate: "2019",
-    photo: "/images/about-placeholder.png"
+    id: "zc-05",
+    name: "Sayema Ainan",
+    nameBn: "সায়েমা আইনান",
+    designation: "Regional Chairman, South Zone",
+    designationBn: "আঞ্চলিক চেয়ারম্যান, দক্ষিণ জোন",
+    photo: "https://res.cloudinary.com/armmzmyq/image/upload/v1787247243/cgfwa/zhgzws4cmo20obj18jq6.jpg"
   },
   {
-    id: "fldr-06",
-    name: "Dr. Shafiqul Alam",
-    nameBn: "ড. শফিকুল আলম",
-    designation: "Former Director (Healthcare)",
-    designationBn: "সাবেক পরিচালক (স্বাস্থ্যসেবা)",
-    startDate: "2011",
-    endDate: "2018",
-    photo: "/images/about-placeholder.png"
+    id: "zc-06",
+    name: "Fouzia Noor",
+    nameBn: "ফৌজিয়া নূর",
+    designation: "Acting Regional Chairman, East Zone",
+    designationBn: "আঞ্চলিক চেয়ারম্যান (অস্থায়ী), পূর্ব জোন",
+    photo: "https://res.cloudinary.com/armmzmyq/image/upload/v1787247242/cgfwa/ati1h3fwrq8p3tv0u6lh.jpg"
   },
   {
-    id: "fldr-07",
-    name: "Captain Jamil Uddin",
-    nameBn: "ক্যাপ্টেন জামিল উদ্দিন",
-    designation: "Former Director (Logistics)",
-    designationBn: "সাবেক পরিচালক (লজিস্টিকস)",
-    startDate: "2008",
-    endDate: "2014",
-    photo: "/images/about-placeholder.png"
-  },
-  {
-    id: "fldr-08",
-    name: "Rear Admiral Mahbub Ali (Retd.)",
-    nameBn: "রিয়ার অ্যাডমিরাল মাহবুব আলী (অবঃ)",
-    designation: "Former Chairman",
-    designationBn: "সাবেক চেয়ারম্যান",
-    startDate: "2005",
-    endDate: "2013",
-    photo: "/images/about-placeholder.png"
-  },
-  {
-    id: "fldr-09",
-    name: "Commodore A.B.M. Rezaul",
-    nameBn: "কমোডর এ.বি.এম. রেজাউল",
-    designation: "Former Director General",
-    designationBn: "সাবেক মহাপরিচালক",
-    startDate: "2002",
-    endDate: "2010",
-    photo: "/images/about-placeholder.png"
-  },
-  {
-    id: "fldr-10",
-    name: "Rear Admiral Niaz Mohammad (Retd.)",
-    nameBn: "রিয়ার অ্যাডমিরাল নিয়াজ মোহাম্মদ (অবঃ)",
-    designation: "Founding Chairman",
-    designationBn: "প্রতিষ্ঠাতা চেয়ারম্যান",
-    startDate: "1998",
-    endDate: "2005",
-    photo: "/images/about-placeholder.png"
+    id: "zc-07",
+    name: "Tanjia Afrin",
+    nameBn: "তানজিয়া আফরিন",
+    designation: "Regional Chairman, West Zone",
+    designationBn: "আঞ্চলিক চেয়ারম্যান, পশ্চিম জোন",
+    photo: "https://res.cloudinary.com/armmzmyq/image/upload/v1787247241/cgfwa/r06yfjasruz6tkrhd3vc.jpg"
   }
+];
+
+export const dhakaCommittee = [
+  { id: "dc-01", name: "Dr. Zakia Sultana", nameBn: "ডা. জাকিয়া সুলতানা", designation: "Chairman", designationBn: "চেয়ারম্যান", photo: "https://res.cloudinary.com/armmzmyq/image/upload/v1787247243/cgfwa/image_1_tpxgba.jpg" },
+  { id: "dc-02", name: "Lt Cmdr M Sajjad Hossain Shakil, (S), BN", nameBn: "লেঃ কমান্ডার এম সাজ্জাদ হোসেন শাকিল, (এস), বিএন", designation: "Treasurer", designationBn: "কোষাধ্যক্ষ", photo: "https://res.cloudinary.com/armmzmyq/image/upload/v1787247252/cgfwa/image_2_jfduea.jpg" },
+  { id: "dc-03", name: "Farzana Akter", nameBn: "ফারজানা আক্তার", designation: "General Secretary", designationBn: "সাধারণ সচিব", photo: "https://res.cloudinary.com/armmzmyq/image/upload/v1787247256/cgfwa/image_3_wj7vmt.jpg" },
+  { id: "dc-04", name: "Farida Sharmin Ratna", nameBn: "ফরিদা শারমীন রত্না", designation: "Secretary (Education)", designationBn: "সচিব (শিক্ষা)", photo: "https://res.cloudinary.com/armmzmyq/image/upload/v1787247257/cgfwa/image_4_khtctx.jpg" },
+  { id: "dc-05", name: "Dr. Matuka Jannatul Ferdous", nameBn: "ডা. মাতুকা জান্নাতুল ফেরদৌস", designation: "Secretary (Child Health, Maternity & Family Planning)", designationBn: "সচিব (শিশু স্বাস্থ্য, মাতৃমঙ্গল ও পরিবার পরিকল্পনা)", photo: "https://res.cloudinary.com/armmzmyq/image/upload/v1787247258/cgfwa/image_5_eohiag.jpg" },
+  { id: "dc-06", name: "Azra Ferdousi", nameBn: "আজরা ফেরদৌসী", designation: "Secretary (Cultural), Secretary (Sports)", designationBn: "সচিব (সাংস্কৃতিক), সচিব (ক্রীড়া)", photo: "https://res.cloudinary.com/armmzmyq/image/upload/v1787247259/cgfwa/image_6_f7lact.jpg" },
+  { id: "dc-07", name: "Durrin Nawaz", nameBn: "দুররিন নেওয়াজ", designation: "Secretary (Sewing & Tech), Joint Sec (Edu)", designationBn: "সচিব (সেলাই ও কারিগরি), যুগ্ম সচিব (শিক্ষা)", photo: "https://res.cloudinary.com/armmzmyq/image/upload/v1787247259/cgfwa/image_7_kvoawo.jpg" },
+  { id: "dc-08", name: "Dr. Isfat Ara", nameBn: "ডা. ইসফাত আরা", designation: "Joint Sec (Cultural), Joint Sec (PR)", designationBn: "যুগ্ম সচিব (সাংস্কৃতিক), যুগ্ম সচিব (গণসংযোগ)", photo: "https://res.cloudinary.com/armmzmyq/image/upload/v1787247260/cgfwa/image_8_xvux7w.jpg" },
+  { id: "dc-09", name: "Shamima Zaman", nameBn: "শামীমা জামান", designation: "Joint Sec (Sewing & Tech), Joint Sec (Sports)", designationBn: "যুগ্ম সচিব (সেলাই ও কারিগরি), যুগ্ম সচিব (ক্রীড়া)", photo: "https://res.cloudinary.com/armmzmyq/image/upload/v1787247261/cgfwa/image_9_tgbggm.png" },
+  { id: "dc-10", name: "Nargis Parveen", nameBn: "নার্গিস পারভীন", designation: "Member", designationBn: "সদস্য", photo: "https://res.cloudinary.com/armmzmyq/image/upload/v1787247244/cgfwa/image_10_wuyrs2.jpg" },
+  { id: "dc-11", name: "Nasrin Akter", nameBn: "নাসরিন আক্তার", designation: "Member", designationBn: "সদস্য", photo: "https://res.cloudinary.com/armmzmyq/image/upload/v1787247245/cgfwa/image_11_mvek7i.jpg" }
+];
+
+export const lcDhakaCommittee = [
+  { id: "lc-01", name: "Mafruha Azad Tanzi", nameBn: "মাফরুহা আজাদ তানজি", designation: "Chairman", designationBn: "চেয়ারম্যান", photo: "https://res.cloudinary.com/armmzmyq/image/upload/v1787247262/cgfwa/image_1_kkxswj.jpg" },
+  { id: "lc-02", name: "Shirin Majid", nameBn: "শিরীন মজিদ", designation: "General Secretary", designationBn: "সাধারণ সচিব", photo: "https://res.cloudinary.com/armmzmyq/image/upload/v1787247268/cgfwa/image_3_rizmip.jpg" },
+  { id: "lc-03", name: "Lt Cmdr M Sajjad Hossain Shakil, (S), BN", nameBn: "লেঃ কমান্ডার এম সাজ্জাদ হোসেন শাকিল, (এস), বিএন", designation: "Treasurer", designationBn: "কোষাধ্যক্ষ", photo: "https://res.cloudinary.com/armmzmyq/image/upload/v1787247269/cgfwa/image_4_stq8q3.jpg" },
+  { id: "lc-04", name: "Tasnim Zerin", nameBn: "তাসনিম জেরিন", designation: "Joint Secretary (Cultural)", designationBn: "যুগ্ম সচিব (সাংস্কৃতিক)", photo: "https://res.cloudinary.com/armmzmyq/image/upload/v1787247271/cgfwa/image_6_elm4oj.jpg" },
+  { id: "lc-05", name: "Anika Arju", nameBn: "আনিকা আরজু", designation: "Joint Secretary (Sports)", designationBn: "যুগ্ম সচিব (ক্রীড়া)", photo: "https://res.cloudinary.com/armmzmyq/image/upload/v1787247273/cgfwa/image_8_glp9zu.jpg" },
+  { id: "lc-06", name: "Sabrina Khanom", nameBn: "সাবরিনা খানম", designation: "Secretary (Children's Club)", designationBn: "সচিব (চিলড্রেন'স ক্লাব)", photo: "https://res.cloudinary.com/armmzmyq/image/upload/v1787247262/cgfwa/image_10_lmltqy.jpg" },
+  { id: "lc-07", name: "Afia Zinat", nameBn: "আফিয়া জিনাত", designation: "Joint Secretary (Children's Club)", designationBn: "যুগ্ম সচিব (চিলড্রেন'স ক্লাব)", photo: "https://res.cloudinary.com/armmzmyq/image/upload/v1787247264/cgfwa/image_12_asleqr.jpg" },
+  { id: "lc-08", name: "Maisa Tasin Khan", nameBn: "মাইসা তাসিন খান", designation: "Joint Secretary (Education)", designationBn: "যুগ্ম সচিব (শিক্ষা)", photo: "https://res.cloudinary.com/armmzmyq/image/upload/v1787247265/cgfwa/image_13_dfn67k.jpg" }
 ];

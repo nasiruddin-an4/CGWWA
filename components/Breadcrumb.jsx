@@ -20,7 +20,10 @@ export const Breadcrumb = () => {
       case 'leadership': return t('Leadership', 'নেতৃত্ব');
       case 'chairman-message': return t("Chairman's Message", 'চেয়ারম্যানের বাণী');
       case 'director-message': return t("Director's Message", 'মহাপরিচালকের বাণী');
-      case 'team': return t('Leadership Team', 'নেতৃত্ব পরিষদ');
+      case 'president-committee': return t('President Committee', 'প্রেসিডেন্ট কমিটি');
+      case 'central-committee': return t('Central Committee', 'কেন্দ্রীয় কমিটি');
+      case 'chairman-committee': return t('Chairman Committee', 'চেয়ারম্যান কমিটি');
+      case 'cgfwa-zones': return t('CGFWA Zones', 'সিজিএফডব্লিউএ জোনসমূহ');
       case 'former-leaders': return t('Former Leaders', 'সাবেক নেতৃত্ব');
       case 'activities': return t('Activities', 'কার্যক্রম');
       case 'programs': return t('Programs', 'প্রকল্পসমূহ');
@@ -29,9 +32,9 @@ export const Breadcrumb = () => {
       case 'gallery': return t('Gallery', 'গ্যালারি');
       case 'photos': return t('Photo Gallery', 'ছবি গ্যালারি');
       case 'videos': return t('Video Gallery', 'ভিডিও গ্যালারি');
-      case 'downloads': return t('Publications & Downloads', 'প্রকাশনা ও ডাউনলোড');
-      case 'contact': return t('Contact Us', 'যোগাযোগ');
-      default: return part.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase());
+      case 'contact': return t('Contact', 'যোগাযোগ');
+      case 'ebook': return t('E-book', 'ই-বুক');
+      default: return part.charAt(0).toUpperCase() + part.slice(1).replace(/-/g, ' ');
     }
   };
 

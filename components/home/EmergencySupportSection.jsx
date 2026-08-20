@@ -18,7 +18,7 @@ export function EmergencySupportSection() {
       {/* Cinematic Image Background */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/images/cta-bg.png" 
+          src="https://res.cloudinary.com/armmzmyq/image/upload/v1787248722/cgfwa/cta-bg_wrafk7.jpg" 
           alt="Coast Guard Support" 
           className="w-full h-full object-cover group-hover/cta:scale-105 transition-transform duration-1000 ease-out"
         />
