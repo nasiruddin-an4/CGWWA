@@ -49,12 +49,10 @@ export function AboutSection() {
           className="relative rounded-md overflow-hidden shadow-2xl aspect-square md:aspect-video lg:aspect-square group cursor-pointer" 
           onClick={() => setIsVideoOpen(true)}
         >
-          <video 
-            src="/aboutVideo.mp4" 
+          <img 
+            src="https://img.youtube.com/vi/pmPyw6etdbE/maxresdefault.jpg" 
+            alt="About CGFWA Video"
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
-            preload="metadata"
-            muted
-            playsInline
           />
           <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/50 transition-colors">
             <div className="w-16 h-16 sm:w-20 sm:h-20 bg-brandBlue text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
@@ -86,14 +84,12 @@ export function AboutSection() {
             >
               <X className="w-5 h-5 sm:w-6 sm:h-6" strokeWidth={2.5} />
             </button>
-            <video 
-              src="/aboutVideo.mp4" 
-              controls 
-              autoPlay 
-              className="w-full h-full object-contain outline-none"
-            >
-              Your browser does not support the video tag.
-            </video>
+            <iframe 
+              src="https://www.youtube.com/embed/pmPyw6etdbE?autoplay=1"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full border-none"
+            ></iframe>
           </div>
         </div>,
         document.body
