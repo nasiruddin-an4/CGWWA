@@ -59,6 +59,7 @@ export const HeaderNavbar = ({ onOpenSearch }) => {
   };
 
   return (
+    <>
     <header
       className={`w-full fixed top-0 z-50 transition-all duration-300 ${isTransparent
           ? 'bg-black/30 backdrop-blur-md border-b border-white/10 shadow-sm'
@@ -167,10 +168,26 @@ export const HeaderNavbar = ({ onOpenSearch }) => {
           </div>
         </div>
       </div>
+    </header>
 
+      {/* Mobile Menu Overlay */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-brandBlue border-t border-white/10 shadow-xl">
-          <div className="p-4 space-y-2 max-h-[80vh] overflow-y-auto">
+        <div 
+          className="fixed inset-0 bg-black/50 z-40 lg:hidden backdrop-blur-sm transition-opacity"
+          onClick={() => setMobileMenuOpen(false)}
+        />
+      )}
+
+      {/* Mobile Menu Drawer */}
+      <div className={`fixed inset-y-0 right-0 w-[300px] bg-brandBlue z-50 shadow-2xl transform transition-transform duration-300 ease-in-out lg:hidden flex flex-col ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+        <div className="flex items-center justify-between p-4 border-b border-white/10 shrink-0">
+          <span className="font-bold text-white">Menu</span>
+          <button onClick={() => setMobileMenuOpen(false)} className="p-2 rounded-md bg-white/10 text-white hover:bg-white/20 focus:outline-none" aria-label="Close Mobile Menu">
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+
+        <div className="flex-1 overflow-y-auto p-4 space-y-2">
             <div className="flex items-center justify-between pb-3 border-b border-white/10">
               <button onClick={toggleLanguage} className="flex items-center gap-1.5 text-xs font-bold text-brandYellow">
                 <Globe className="w-4 h-4" />
@@ -231,7 +248,7 @@ export const HeaderNavbar = ({ onOpenSearch }) => {
                 );
               })}
 
-            <div className="pt-2 flex flex-col gap-2">
+            <div className="pt-2 flex flex-col gap-2 mt-auto border-t border-white/10 pt-4">
               <a href="https://mohona-xi.vercel.app/" target="_blank" rel="noopener noreferrer" className="w-full py-2.5 px-4 rounded-md bg-brandYellow text-black font-bold text-xs flex items-center justify-center gap-2 shadow-sm">
                 <span>{t('Visit Mohona Portal', 'মোহনা পোর্টালে যান')}</span>
                 <ExternalLink className="w-4 h-4" />
@@ -243,7 +260,6 @@ export const HeaderNavbar = ({ onOpenSearch }) => {
             </div>
           </div>
         </div>
-      )}
-    </header>
+    </>
   );
 };

@@ -91,7 +91,7 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative w-full h-[80vh] lg:h-screen flex items-end overflow-hidden group">
+    <section className="relative w-full h-[60vh] lg:h-screen flex items-end overflow-hidden group">
       {/* Background Images */}
       {heroStories.map((story, idx) => (
         <div
@@ -113,11 +113,11 @@ export function HeroSection() {
       ))}
 
       {/* Content Container (Bottom Left) */}
-      <div className="relative z-20 w-full max-w-7xl mx-auto px-6 lg:px-8 pb-16 sm:pb-20">
+      <div className="relative z-20 w-full max-w-7xl mx-auto px-6 lg:px-8 pb-10 sm:pb-14">
         <div className="max-w-2xl">
           <h1
             key={`title-${activeHeroTab}`}
-            className="hero-slide-text text-2xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-white tracking-tight mb-4 drop-shadow-md">
+            className="hero-slide-text text-2xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-white tracking-tight mb-1 drop-shadow-md">
             {heroStories[activeHeroTab].title}
           </h1>
 
@@ -127,15 +127,7 @@ export function HeroSection() {
             {heroStories[activeHeroTab].desc}
           </p>
 
-          <div className="hero-slide-text">
-            <a
-              href={heroStories[activeHeroTab].link}
-              className="inline-flex items-center gap-2 text-white font-semibold uppercase tracking-wider hover:text-brandYellow transition-colors group/btn"
-            >
-              {t('Learn More', 'বিস্তারিত জানুন')}
-              <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
-            </a>
-          </div>
+
         </div>
       </div>
 

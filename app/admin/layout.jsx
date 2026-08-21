@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { LayoutDashboard, Newspaper, Calendar, Image as ImageIcon, Activity, Users, Building2, BookOpen, Library, Download, LogOut, Loader2, Settings, ShieldCheck, ChevronRight, ChevronDown, UserCircle, ExternalLink, MonitorPlay } from 'lucide-react';
+import { LayoutDashboard, Newspaper, Calendar, Image as ImageIcon, Activity, Users, Building2, BookOpen, Library, Download, LogOut, Loader2, Settings, ShieldCheck, ChevronRight, ChevronDown, UserCircle, ExternalLink, MonitorPlay, Menu, X } from 'lucide-react';
 import Image from 'next/image';
 import { CoastGuardLogo } from '@/components/CoastGuardLogo';
 export default function AdminLayout({ children }) {
@@ -11,6 +11,12 @@ export default function AdminLayout({ children }) {
   const router = useRouter();
   const [isLoggingOut, setIsLoggingOut] = React.useState(false);
   const [isProfileOpen, setIsProfileOpen] = React.useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+
+  // Close mobile menu when pathname changes
+  React.useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
 
   // Don't show sidebar on login page
   if (pathname === '/admin/login') {
@@ -47,8 +53,16 @@ export default function AdminLayout({ children }) {
   return (
     <div className="flex h-screen bg-[#F8FAFC] overflow-hidden font-sans selection:bg-brandBlue/20">
 
+      {/* Mobile Sidebar Overlay */}
+      {isMobileMenuOpen && (
+        <div 
+          className="fixed inset-0 bg-slate-900/50 z-40 lg:hidden backdrop-blur-sm transition-opacity"
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
+      )}
+
       {/* Sidebar - Premium Design */}
-      <aside className="w-[280px] bg-gradient-to-b from-[#0F172A] to-[#1E293B] text-white hidden lg:flex flex-col shrink-0 relative z-20 shadow-2xl">
+      <aside className={`w-[280px] bg-gradient-to-b from-[#0F172A] to-[#1E293B] text-white flex flex-col shrink-0 fixed inset-y-0 left-0 lg:relative z-50 lg:z-20 h-full transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'} shadow-2xl`}>
         {/* Subtle decorative overlays */}
         <div className="absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-brandBlue/20 to-transparent pointer-events-none" />
         <div className="absolute top-1/4 right-0 w-32 h-32 bg-brandYellow/5 blur-3xl pointer-events-none" />
@@ -63,6 +77,12 @@ export default function AdminLayout({ children }) {
               <ShieldCheck className="w-3 h-3" /> Secure Access
             </div>
           </div>
+          <button 
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="lg:hidden absolute top-1/2 -translate-y-1/2 right-4 p-2 text-white/70 hover:text-white bg-white/5 rounded-lg border border-white/10"
+          >
+            <X className="w-5 h-5" />
+          </button>
         </div>
 
         <nav className="flex-1 px-4 py-6 space-y-1.5 overflow-y-auto relative z-10 custom-scrollbar">
@@ -166,7 +186,13 @@ export default function AdminLayout({ children }) {
         {/* Mobile Header */}
         <header className="bg-white border-b border-slate-200 p-4 flex lg:hidden items-center justify-between sticky top-0 z-20 shadow-sm">
           <div className="flex items-center gap-3">
-            <CoastGuardLogo className="w-8 h-8 object-contain" />
+            <button 
+              onClick={() => setIsMobileMenuOpen(true)} 
+              className="p-2 -ml-2 text-slate-500 hover:text-brandBlue hover:bg-slate-50 rounded-lg transition-colors"
+            >
+              <Menu className="w-6 h-6" />
+            </button>
+            <CoastGuardLogo className="w-8 h-8 object-contain hidden sm:block" />
             <span className="font-bold text-brandBlue">Admin</span>
           </div>
           <button onClick={handleLogout} className="text-slate-500 hover:text-red-500 p-2">
