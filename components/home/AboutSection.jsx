@@ -84,12 +84,12 @@ export function AboutSection() {
             >
               <X className="w-5 h-5 sm:w-6 sm:h-6" strokeWidth={2.5} />
             </button>
-            <iframe 
-              src="https://www.youtube.com/embed/pmPyw6etdbE?autoplay=1"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-full border-none"
-            ></iframe>
+            <video 
+              src="https://pub-d198e5612db44a06a5ece892a3abef9f.r2.dev/CGFW_AV_Final%2025.04.2026.mp4"
+              autoPlay
+              controls
+              className="w-full h-full"
+            ></video>
           </div>
         </div>,
         document.body

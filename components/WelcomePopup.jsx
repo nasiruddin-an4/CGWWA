@@ -1,8 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { X, BellRing, ArrowRight } from 'lucide-react';
+import { X, BellRing } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 
 const eventData = {
@@ -25,7 +24,7 @@ const eventData = {
   ],
   chiefGuest: 'President, BCG Ladies Club',
   status: 'Upcoming',
-  image: 'https://res.cloudinary.com/armmzmyq/image/upload/v1787247625/cgfwa/DSC_1840_shnhvf.jpg',
+  image: '/noticeImg.jpeg',
 };
 
 export const WelcomePopup = () => {
@@ -37,7 +36,7 @@ export const WelcomePopup = () => {
     const timer = setTimeout(() => {
       setIsVisible(true);
     }, 1000);
-    
+
     return () => clearTimeout(timer);
   }, []);
 
@@ -49,11 +48,11 @@ export const WelcomePopup = () => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-in fade-in duration-300">
-      <div 
+      <div
         className="bg-white rounded-xl shadow-2xl w-full max-w-4xl overflow-hidden relative animate-in zoom-in-95 duration-300 flex flex-col md:flex-row"
       >
         {/* Close Button - Now sits over the white content area on desktop */}
-        <button 
+        <button
           onClick={handleClose}
           className="absolute top-3 right-3 z-10 p-2 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-full transition-colors"
           aria-label="Close popup"
@@ -69,7 +68,7 @@ export const WelcomePopup = () => {
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:to-slate-900/50" />
-          
+
           <div className="absolute bottom-4 left-4 right-4 flex items-center gap-2">
             <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-brandYellow text-brandBlue text-xs font-bold uppercase tracking-wider shadow-md">
               <BellRing className="w-3.5 h-3.5" />
@@ -83,37 +82,29 @@ export const WelcomePopup = () => {
           <h3 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-brandBlue leading-tight pr-8">
             {language === 'bn' ? eventData.titleBn : eventData.title}
           </h3>
-          
+
           <p className="text-slate-600 text-sm md:text-base leading-relaxed line-clamp-3 md:line-clamp-4">
             {language === 'bn' ? eventData.descriptionBn : eventData.description}
           </p>
-          
+
           {/* Extra Event Details for context */}
           <div className="space-y-1.5 pt-2 border-t border-slate-100 text-sm text-slate-500">
-             <div className="flex items-center gap-2">
-                <span className="font-semibold text-slate-700">{t('Date:', 'তারিখ:')}</span> 
-                {eventData.date} ({eventData.time})
-             </div>
-             <div className="flex items-center gap-2">
-                <span className="font-semibold text-slate-700">{t('Location:', 'স্থান:')}</span> 
-                {language === 'bn' ? eventData.locationBn : eventData.location}
-             </div>
+            <div className="flex items-center gap-2">
+              <span className="font-semibold text-slate-700">{t('Date:', 'তারিখ:')}</span>
+              {eventData.date} ({eventData.time})
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="font-semibold text-slate-700">{t('Location:', 'স্থান:')}</span>
+              {language === 'bn' ? eventData.locationBn : eventData.location}
+            </div>
           </div>
 
           <div className="pt-4 flex flex-col sm:flex-row items-center gap-4 mt-auto">
-            <Link 
-              href={`/media/events/${eventData.slug}`}
-              onClick={handleClose}
-              className="w-full sm:flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-brandBlue text-white text-sm font-medium rounded-lg hover:bg-brandBlue/90 transition-all shadow-md hover:shadow-lg"
-            >
-              {t('View Details', 'বিস্তারিত দেখুন')}
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-            <button 
+            <button
               onClick={handleClose}
               className="w-full sm:w-auto px-6 py-3 text-sm font-medium text-slate-500 hover:text-slate-800 hover:bg-slate-100 rounded-lg transition-colors"
             >
-              {t('Dismiss', 'বন্ধ করুন')}
+              {t('Close', 'বন্ধ করুন')}
             </button>
           </div>
         </div>
