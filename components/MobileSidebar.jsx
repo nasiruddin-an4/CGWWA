@@ -8,7 +8,7 @@ import {
   LayoutDashboard, Info, Award, Briefcase, Layers,
   Newspaper, Calendar, Image, FileText, PhoneCall
 } from 'lucide-react';
-import { navigationMenu } from '@/data/navigation';
+import {  navigationMenu  } from '@/lib/navigation';
 import { useLanguage } from '@/context/LanguageContext';
 import { CoastGuardLogo } from './CoastGuardLogo';
 

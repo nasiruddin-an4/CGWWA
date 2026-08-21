@@ -2,15 +2,17 @@
 
 import React, { useState } from "react";
 import { PageHeader } from "@/components/PageHeader";
-import { videoGallery } from "@/data/gallery";
+
 import { useLanguage } from "@/context/LanguageContext";
 import * as Icons from "lucide-react";
+import { useDbData } from "@/hooks/useDbData";
 
 export default function VideoGalleryPage() {
   const { language, t } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   // Extract unique categories
+  const { data: videoGallery = [] } = useDbData('gallery_videos', []);
   const categories = ["All", ...new Set(videoGallery.map((item) => item.category))];
 
   // Filter videos based on category

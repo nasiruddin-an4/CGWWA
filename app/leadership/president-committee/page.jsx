@@ -3,12 +3,15 @@
 import React from 'react';
 import Link from 'next/link';
 import { PageHeader } from '@/components/PageHeader';
-import { presidentInfo } from '@/data/leadership';
+
 import { useLanguage } from '@/context/LanguageContext';
+import { useDbData } from '@/hooks/useDbData';
 import { Shield, Mail, ArrowRight } from 'lucide-react';
 
 export default function PresidentCommitteePage() {
   const { language, t } = useLanguage();
+  const { data: dbData } = useDbData('leadership', [{}]);
+  const presidentInfo = dbData[0] || {};
 
   return (
     <div className="space-y-12 max-w-7xl mx-auto pb-16">
@@ -46,9 +49,9 @@ export default function PresidentCommitteePage() {
 
               <div className="text-[#64748B] leading-relaxed text-[15px]">
                 <p className="line-clamp-4">
-                  {language === 'bn' ? presidentInfo.bioBn[0] : presidentInfo.bio[0]}
+                  {language === 'bn' ? presidentInfo?.bioBn?.[0] : presidentInfo?.bio?.[0]}
                   {' '}
-                  {language === 'bn' ? presidentInfo.bioBn[1] : presidentInfo.bio[1]}
+                  {language === 'bn' ? presidentInfo?.bioBn?.[1] : presidentInfo?.bio?.[1]}
                 </p>
               </div>
 

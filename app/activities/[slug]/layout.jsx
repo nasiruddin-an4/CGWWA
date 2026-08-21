@@ -1,8 +1,10 @@
-import { activitiesData } from '@/data/activities';
+
 import { notFound } from 'next/navigation';
+import { getCollectionData } from '@/lib/db';
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
+  const activitiesData = await getCollectionData('activities', []);
   const category = activitiesData.find((c) => c.slug === slug);
 
   if (!category) {

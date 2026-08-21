@@ -2,8 +2,9 @@
 
 import React from "react";
 import { notFound } from "next/navigation";
-import { flagshipPrograms } from "@/data/programs";
+
 import { useLanguage } from "@/context/LanguageContext";
+import { useDbData } from "@/hooks/useDbData";
 import * as Icons from "lucide-react";
 import Link from "next/link";
 import { PageHeader } from "@/components/PageHeader";
@@ -11,11 +12,16 @@ import { PageHeader } from "@/components/PageHeader";
 export default function ProgramDetailPage({ params }) {
   const { language, t } = useLanguage();
   const { slug } = React.use(params);
+  const { data: dbPrograms, loading } = useDbData('programs', []);
   
   // Find the program by slug
-  const program = flagshipPrograms.find((p) => p.slug === slug);
+  const program = dbPrograms.find((p) => p.slug === slug);
 
-  if (!program) {
+  if (loading) {
+    return <div className="flex justify-center p-20"><Icons.Loader2 className="w-8 h-8 animate-spin text-brandBlue" /></div>;
+  }
+
+  if (!program && !loading) {
     notFound();
   }
 

@@ -3,12 +3,14 @@
 import React from 'react';
 import Link from 'next/link';
 import { PageHeader } from '@/components/PageHeader';
-import { activitiesData } from '@/data/activities';
+
 import { useLanguage } from '@/context/LanguageContext';
+import { useDbData } from '@/hooks/useDbData';
 import * as Icons from 'lucide-react';
 
 export default function ActivitiesPage() {
   const { language, t } = useLanguage();
+  const { data: dbActivities } = useDbData('activities', []);
 
   return (
     <div className="space-y-10 max-w-7xl mx-auto">
@@ -22,7 +24,7 @@ export default function ActivitiesPage() {
       />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {activitiesData.map((activity) => {
+        {dbActivities.map((activity) => {
           const Icon = Icons[activity.icon];
           return (
             <Link 

@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { PageHeader } from "@/components/PageHeader";
-import { newsArticles } from "@/data/news";
+
 import { useLanguage } from "@/context/LanguageContext";
 import { Calendar, User, ArrowRight, Search } from "lucide-react";
 import Link from "next/link";
@@ -14,12 +14,33 @@ export default function NewsPage() {
 
   const categories = ["All", "Education", "Healthcare", "Relief & Welfare", "Community", "Official Notice", "Environment"];
 
-  const filteredNews = newsArticles.filter((article) => {
+  const [dbNews, setDbNews] = useState([]);
+  
+  React.useEffect(() => {
+    // Attempt to fetch from MongoDB, fallback to empty array
+    fetch('/api/admin/news')
+      .then(res => res.json())
+      .then(data => {
+        if (data.success && data.data.length > 0) {
+          setDbNews(data.data);
+        } else {
+          setDbNews([]);
+        }
+      })
+      .catch(err => {
+        console.error("Failed to fetch news from DB", err);
+        setDbNews([]);
+      });
+  }, []);
+
+  const newsSource = dbNews;
+
+  const filteredNews = newsSource.filter((article) => {
     const matchesCategory = selectedCategory === "All" || article.category === selectedCategory;
     const matchesSearch =
       article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      article.titleBn.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      article.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
+      article.titleBn?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      article.excerpt?.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 

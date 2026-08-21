@@ -2,8 +2,9 @@
 
 import React, { useState } from 'react';
 import { PageHeader } from '@/components/PageHeader';
-import { upcomingEvents } from '@/data/events';
+
 import { useLanguage } from '@/context/LanguageContext';
+import { useDbData } from '@/hooks/useDbData';
 import { MapPin, Clock, Users, ArrowRight } from 'lucide-react';
 
 import Link from 'next/link';
@@ -12,7 +13,9 @@ export default function EventsPage() {
   const { language, t } = useLanguage();
   const [filter, setFilter] = useState('all');
 
-  const filteredEvents = upcomingEvents
+  const { data: eventSource } = useDbData('events', []);
+
+  const filteredEvents = eventSource
     .filter((event) => {
       const isUpcoming = new Date(event.date).getTime() >= new Date().setHours(0, 0, 0, 0);
       if (filter === 'upcoming') return isUpcoming;

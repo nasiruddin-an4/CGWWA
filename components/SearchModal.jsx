@@ -3,17 +3,23 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { Search, X, FileText, Newspaper, Calendar, Layers, User, ArrowRight } from 'lucide-react';
-import { newsArticles } from '@/data/news';
-import { upcomingEvents } from '@/data/events';
-import { flagshipPrograms } from '@/data/programs';
-import { downloadsList } from '@/data/downloads';
+
+
+
+
 import { useLanguage } from '@/context/LanguageContext';
+import { useDbData } from '@/hooks/useDbData';
 
 export const SearchModal = ({ isOpen, onClose }) => {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState([]);
   const router = useRouter();
   const { language, t } = useLanguage();
+
+  const { data: dbNews } = useDbData('news', []);
+  const { data: dbEvents } = useDbData('events', []);
+  const { data: dbPrograms } = useDbData('programs', []);
+  const { data: dbDownloads } = useDbData('downloads', []);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -47,27 +53,27 @@ export const SearchModal = ({ isOpen, onClose }) => {
       }
     });
 
-    newsArticles.forEach((n) => {
+    dbNews.forEach((n) => {
       if (n.title.toLowerCase().includes(q) || n.titleBn.includes(q) || n.excerpt.toLowerCase().includes(q)) {
         searchItems.push({ id: n.id, title: n.title, titleBn: n.titleBn, type: 'News', path: `/news/${n.slug}`, description: `${n.category} • ${n.publishedAt}` });
       }
     });
 
-    flagshipPrograms.forEach((pr) => {
+    dbPrograms.forEach((pr) => {
       if (pr.title.toLowerCase().includes(q) || pr.titleBn.includes(q) || pr.shortDesc.toLowerCase().includes(q)) {
         searchItems.push({ id: pr.id, title: pr.title, titleBn: pr.titleBn, type: 'Program', path: `/programs/${pr.slug}`, description: pr.category });
       }
     });
 
-    upcomingEvents.forEach((ev) => {
-      if (ev.title.toLowerCase().includes(q) || ev.titleBn.includes(q) || ev.location.toLowerCase().includes(q)) {
-        searchItems.push({ id: ev.id, title: ev.title, titleBn: ev.titleBn, type: 'Event', path: `/events/${ev.slug}`, description: `${ev.date} • ${ev.location}` });
+    dbEvents.forEach((ev) => {
+      if (ev.title.toLowerCase().includes(q) || ev.titleBn.includes(q) || ev.excerpt.toLowerCase().includes(q)) {
+        searchItems.push({ id: ev.id, title: ev.title, titleBn: ev.titleBn, type: 'Event', path: `/events/${ev.slug}`, description: `${ev.location} • ${ev.date}` });
       }
     });
 
-    downloadsList.forEach((dl) => {
-      if (dl.title.toLowerCase().includes(q) || dl.titleBn.includes(q) || dl.refNo.toLowerCase().includes(q)) {
-        searchItems.push({ id: dl.id, title: dl.title, titleBn: dl.titleBn, type: 'Publication', path: '/downloads', description: `${dl.category} • Ref: ${dl.refNo}` });
+    dbDownloads.forEach((dl) => {
+      if (dl.title.toLowerCase().includes(q) || dl.titleBn.includes(q)) {
+        searchItems.push({ id: dl.id, title: dl.title, titleBn: dl.titleBn, type: 'Download', path: '/downloads', description: dl.category });
       }
     });
 

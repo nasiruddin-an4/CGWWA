@@ -2,12 +2,15 @@
 
 import React from 'react';
 import { PageHeader } from '@/components/PageHeader';
-import { presidentInfo } from '@/data/leadership';
+
 import { Quote } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
+import { useDbData } from '@/hooks/useDbData';
 
 export default function PresidentMessagePage() {
   const { language, t } = useLanguage();
+  const { data: dbData } = useDbData('leadership', [{}]);
+  const presidentInfo = dbData[0] || {};
 
   return (
     <div className="space-y-10 max-w-7xl mx-auto">
@@ -39,7 +42,7 @@ export default function PresidentMessagePage() {
               {language === 'bn' ? presidentInfo.designationBn : presidentInfo.designation}
             </p>
             <div className="pt-2 border-t border-[#E5E7EB] text-xs text-[#8E9299] space-y-1">
-              {(language === 'bn' ? presidentInfo.bioBn : presidentInfo.bio).map((b, i) =>
+              {(language === 'bn' ? presidentInfo?.bioBn || [] : presidentInfo?.bio || []).map((b, i) =>
                 <p key={i} className="mb-2 text-justify">• {b}</p>
               )}
             </div>
@@ -54,8 +57,8 @@ export default function PresidentMessagePage() {
           </blockquote>
 
           <div className="space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed text-justify">
-            {(language === 'bn' ? presidentInfo.fullMessageBn : presidentInfo.fullMessage)?.map((para, i) =>
-              <p key={i}>{para}</p>
+            {(language === 'bn' ? presidentInfo?.fullMessageBn || [] : presidentInfo?.fullMessage || []).map((p, i) =>
+              <p key={i}>{p}</p>
             )}
           </div>
 

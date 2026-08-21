@@ -2,11 +2,13 @@
 
 import React from 'react';
 import { PageHeader } from '@/components/PageHeader';
-import { zoneChairmen } from '@/data/leadership';
+
 import { useLanguage } from '@/context/LanguageContext';
+import { useDbData } from '@/hooks/useDbData';
 
 export default function ChairmanCommitteePage() {
   const { language, t } = useLanguage();
+  const { data: dbData } = useDbData('zone_chairmen', []);
 
   const MemberCard = ({ member }) => (
     <div className="flex flex-col items-center group transition-all duration-300 w-full max-w-[280px] mx-auto">
@@ -51,7 +53,7 @@ export default function ChairmanCommitteePage() {
       <section className="space-y-6 pt-4 px-4 sm:px-6">
         <div className="flex justify-center">
           <div className="w-full flex flex-wrap justify-center gap-6 md:gap-8 max-w-6xl">
-            {zoneChairmen.map((member) => (
+            {dbData.slice(1).map((member) => (
               <div key={member.id} className="w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(25%-1.5rem)] max-w-[280px]">
                 <MemberCard member={member} />
               </div>

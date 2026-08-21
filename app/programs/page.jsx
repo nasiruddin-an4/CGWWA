@@ -2,13 +2,15 @@
 
 import React from 'react';
 import { PageHeader } from '@/components/PageHeader';
-import { flagshipPrograms } from '@/data/programs';
+
 import { useLanguage } from '@/context/LanguageContext';
+import { useDbData } from '@/hooks/useDbData';
 
 
 
 export default function ProgramsPage() {
   const { language, t } = useLanguage();
+  const { data: dbPrograms } = useDbData('programs', []);
 
   return (
     <div className="space-y-8 pb-12 max-w-7xl mx-auto">
@@ -20,7 +22,7 @@ export default function ProgramsPage() {
       
 
       <div className="space-y-6">
-        {flagshipPrograms.map((prog) =>
+        {dbPrograms.map((prog) =>
         <div
           key={prog.id}
           className="bg-white rounded-md border border-[#E5E7EB] p-6 sm:p-8 shadow-xs hover:border-brandYellow transition-all grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">

@@ -2,8 +2,9 @@
 
 import React, { useState, useEffect, use } from 'react';
 import { notFound } from 'next/navigation';
-import { activitiesData } from '@/data/activities';
+
 import { useLanguage } from '@/context/LanguageContext';
+import { useDbData } from '@/hooks/useDbData';
 import * as Icons from 'lucide-react';
 import { X, ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
 import { createPortal } from 'react-dom';
@@ -15,7 +16,9 @@ export default function EventDetailsPage({ params }) {
   const [lightboxImage, setLightboxImage] = useState(null);
   const [mounted, setMounted] = useState(false);
   
-  const category = activitiesData.find(c => c.slug === slug);
+  const { data: dbActivities, loading } = useDbData('activities', []);
+  
+  const category = dbActivities.find(c => c.slug === slug);
   const event = category?.events.find(e => e.eventSlug === eventSlug);
 
   useEffect(() => {
@@ -40,6 +43,14 @@ export default function EventDetailsPage({ params }) {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [lightboxImage, event]);
   
+  if (loading) {
+    return (
+      <div className="min-h-[60vh] flex items-center justify-center">
+        <Icons.Loader2 className="w-10 h-10 animate-spin text-brandBlue" />
+      </div>
+    );
+  }
+
   if (!category || !event) return notFound();
 
   const Icon = Icons[category.icon];

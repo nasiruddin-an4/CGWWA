@@ -2,8 +2,9 @@
 
 import React, { useState, useEffect, use } from 'react';
 import { notFound } from 'next/navigation';
-import { activitiesData } from '@/data/activities';
+
 import { useLanguage } from '@/context/LanguageContext';
+import { useDbData } from '@/hooks/useDbData';
 import { PageHeader } from '@/components/PageHeader';
 import * as Icons from 'lucide-react';
 import { X } from 'lucide-react';
@@ -20,7 +21,17 @@ export default function ActivityCategoryPage({ params }) {
     setMounted(true);
   }, []);
   
-  const category = activitiesData.find(c => c.slug === slug);
+  const { data: dbActivities, loading } = useDbData('activities', []);
+  
+  if (loading) {
+    return (
+      <div className="min-h-[60vh] flex items-center justify-center">
+        <Icons.Loader2 className="w-10 h-10 animate-spin text-brandBlue" />
+      </div>
+    );
+  }
+
+  const category = dbActivities.find(c => c.slug === slug);
   
   if (!category) {
     return notFound();

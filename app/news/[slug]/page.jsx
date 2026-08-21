@@ -2,19 +2,25 @@
 
 import React, { use } from "react";
 import { notFound } from "next/navigation";
-import { newsArticles } from "@/data/news";
+
 import { useLanguage } from "@/context/LanguageContext";
+import { useDbData } from "@/hooks/useDbData";
 import * as Icons from "lucide-react";
 import Link from "next/link";
 
 export default function NewsArticlePage({ params }) {
   const { language, t } = useLanguage();
   const { slug } = use(params);
+  const { data: dbNews, loading } = useDbData('news', []);
 
   // Find the article by slug
-  const article = newsArticles.find((n) => n.slug === slug);
+  const article = dbNews.find((n) => n.slug === slug);
 
-  if (!article) {
+  if (loading) {
+    return <div className="flex justify-center p-20"><Icons.Loader2 className="w-8 h-8 animate-spin text-brandBlue" /></div>;
+  }
+
+  if (!article && !loading) {
     notFound();
   }
 

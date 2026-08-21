@@ -2,13 +2,15 @@
 
 import React from 'react';
 import { PageHeader } from '@/components/PageHeader';
-import { historyMilestones } from '@/data/organization';
+
 import { Calendar } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
+import { useDbData } from '@/hooks/useDbData';
 import { SectionHeader } from '@/components/SectionHeader';
 
 export default function HistoryPage() {
   const { language, t } = useLanguage();
+  const { data: dbHistory } = useDbData('history_milestones', []);
 
   return (
     <div className="space-y-10 max-w-7xl mx-auto">
@@ -30,7 +32,7 @@ export default function HistoryPage() {
 
         {/* Timeline Component */}
         <div className="relative border-l-2 border-brandYellow ml-4 sm:ml-8 space-y-8 py-2">
-          {historyMilestones.map((m) =>
+          {dbHistory.map((m) =>
           <div key={m.year} className="relative pl-6 sm:pl-10 group">
               {/* Year Marker Circle */}
               <div className="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-brandYellow text-slate-900 font-bold text-xs flex items-center justify-center ring-4 ring-white shadow-xs font-mono">

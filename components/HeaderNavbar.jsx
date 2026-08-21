@@ -7,8 +7,9 @@ import {
   Search, Globe, Menu, X, ChevronDown, ExternalLink, BookOpen
 } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
-import { organizationInfo } from '@/data/organization';
-import { navigationMenu } from '@/data/navigation';
+
+import {  navigationMenu  } from '@/lib/navigation';
+import { useDbData } from '@/hooks/useDbData';
 import { CoastGuardLogo } from './CoastGuardLogo';
 
 export const HeaderNavbar = ({ onOpenSearch }) => {
@@ -19,6 +20,8 @@ export const HeaderNavbar = ({ onOpenSearch }) => {
   const [expandedMobileAccordions, setExpandedMobileAccordions] = useState({});
 
   const [scrolled, setScrolled] = useState(false);
+  const { data: dbOrg } = useDbData('organization', [{}]);
+  const organizationInfo = dbOrg[0] || {};
 
   useEffect(() => {
     setMobileMenuOpen(false);
@@ -43,7 +46,8 @@ export const HeaderNavbar = ({ onOpenSearch }) => {
   const isLinkActive = (path) => {
     if (!path) return false;
     const cleanPath = path.split('?')[0];
-    return pathname === cleanPath;
+    if (cleanPath === '/') return pathname === '/';
+    return pathname === cleanPath || pathname.startsWith(`${cleanPath}/`);
   };
 
   const isParentActive = (item) => {

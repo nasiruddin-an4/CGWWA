@@ -2,12 +2,15 @@
 
 import Link from 'next/link';
 import { Mail, Phone, MapPin, ExternalLink, Facebook, Twitter, Youtube, MessageCircle } from 'lucide-react';
-import { organizationInfo } from '@/data/organization';
+
 import { useLanguage } from '@/context/LanguageContext';
+import { useDbData } from '@/hooks/useDbData';
 import { CoastGuardLogo } from './CoastGuardLogo';
 
 export const Footer = () => {
   const { language, t } = useLanguage();
+  const { data: dbOrg } = useDbData('organization', [{}]);
+  const organizationInfo = dbOrg[0] || {};
 
   return (
     <footer className="bg-brandBlue text-slate-300 border-t border-white/10 relative overflow-hidden text-xs sm:text-sm">
@@ -36,17 +39,17 @@ export const Footer = () => {
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-brandYellow brightness-150 shrink-0 mt-0.5" />
                 <span>
-                  {t(organizationInfo.headquarters.address, organizationInfo.headquarters.addressBn)}
-                  , {organizationInfo.headquarters.city}-{organizationInfo.headquarters.postalCode}
+                  {t(organizationInfo?.headquarters?.address || '', organizationInfo?.headquarters?.addressBn || '')}
+                  {organizationInfo?.headquarters?.city ? `, ${organizationInfo.headquarters.city}-${organizationInfo.headquarters.postalCode}` : ''}
                 </span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-brandYellow brightness-150 shrink-0" />
-                <span>{organizationInfo.headquarters.phone.join(' / ')}</span>
+                <span>{organizationInfo?.headquarters?.phone?.join(' / ')}</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-brandYellow brightness-150 shrink-0" />
-                <span>{organizationInfo.headquarters.email}</span>
+                <span>{organizationInfo?.headquarters?.email}</span>
               </li>
             </ul>
           </div>

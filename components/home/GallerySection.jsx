@@ -7,12 +7,14 @@ import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 import { SectionHeader } from '@/components/SectionHeader';
 import { Button } from '@/components/Button';
-import { photoGallery } from '@/data/gallery';
+
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { useDbData } from '@/hooks/useDbData';
 
 export function GallerySection() {
   const { language, t } = useLanguage();
   const observe = useScrollReveal();
+  const { data: galleryData } = useDbData('gallery_photos', []);
 
   return (
     <>
@@ -35,7 +37,7 @@ export function GallerySection() {
 
         {/* Clean Masonry Gallery Grid */}
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 space-y-5 relative z-10">
-          {photoGallery.slice(0, 6).map((p, idx) => (
+          {galleryData.slice(0, 6).map((p, idx) => (
             <Link
               href={p.link}
               key={p.id}

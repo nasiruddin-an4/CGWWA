@@ -2,11 +2,14 @@
 
 import React from 'react';
 import { PageHeader } from '@/components/PageHeader';
-import { dhakaCommittee, lcDhakaCommittee } from '@/data/leadership';
+
 import { useLanguage } from '@/context/LanguageContext';
+import { useDbData } from '@/hooks/useDbData';
 
 export default function CgfwaZonesPage() {
   const { language, t } = useLanguage();
+  const { data: dbDhaka } = useDbData('dhaka_committee', []);
+  const { data: dbLcDhaka } = useDbData('lc_dhaka_committee', []);
 
   const MemberCard = ({ member }) => (
     <div className="flex flex-col items-center group transition-all duration-300 w-full max-w-[280px] mx-auto">
@@ -59,7 +62,7 @@ export default function CgfwaZonesPage() {
 
         <div className="flex justify-center">
           <div className="w-full flex flex-wrap justify-center gap-6 md:gap-8 max-w-6xl">
-            {dhakaCommittee.map((member) => (
+            {dbDhaka.map((member) => (
               <div key={member.id} className="w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(25%-1.5rem)] max-w-[280px]">
                 <MemberCard member={member} />
               </div>
@@ -84,7 +87,7 @@ export default function CgfwaZonesPage() {
 
         <div className="flex justify-center">
           <div className="w-full flex flex-wrap justify-center gap-6 md:gap-8 max-w-6xl">
-            {lcDhakaCommittee.map((member) => (
+            {dbLcDhaka.map((member) => (
               <div key={member.id} className="w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(25%-1.5rem)] max-w-[280px]">
                 <MemberCard member={member} />
               </div>

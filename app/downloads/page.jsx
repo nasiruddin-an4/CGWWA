@@ -2,18 +2,22 @@
 
 import React, { useState } from 'react';
 import { PageHeader } from '@/components/PageHeader';
-import { downloadsList } from '@/data/downloads';
+
 import { useLanguage } from '@/context/LanguageContext';
-import { FileText, Download, Calendar, Search, HardDrive } from 'lucide-react';
+import { useDbData } from '@/hooks/useDbData';
+import { Download, FileText, Calendar, HardDrive, Search } from 'lucide-react';
+import Swal from 'sweetalert2';
 
 export default function DownloadsPage() {
   const { language, t } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
 
+  const { data: dbDownloads } = useDbData('downloads', []);
+
   const categories = ['All', 'Annual Reports', 'Forms & Applications', 'Notices & Circulars', 'Guidelines & Acts', 'Publications & Journals'];
 
-  const filteredDownloads = downloadsList.filter((item) => {
+  const filteredDownloads = dbDownloads.filter((item) => {
     const matchesCategory = selectedCategory === 'All' || item.category === selectedCategory;
     const matchesSearch =
     item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -101,7 +105,13 @@ export default function DownloadsPage() {
             </div>
 
             <button
-            onClick={() => alert(`Downloading: ${item.title}`)}
+            onClick={() => Swal.fire({
+              title: 'Downloading...',
+              text: `Downloading: ${item.title}`,
+              icon: 'info',
+              timer: 2000,
+              showConfirmButton: false
+            })}
             className="px-4 py-2.5 rounded-full bg-brandYellow text-white text-xs font-semibold hover:bg-[#00523c] transition-colors flex items-center gap-2 shrink-0 self-end sm:self-center shadow-xs cursor-pointer">
             
               <Download className="w-4 h-4" />

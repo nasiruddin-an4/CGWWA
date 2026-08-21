@@ -2,11 +2,14 @@
 
 import { useState } from 'react';
 import { X, ZoomIn, Calendar, MapPin } from 'lucide-react';
-import { photoGallery, videoGallery } from '@/data/gallery';
+
 import { useLanguage } from '@/context/LanguageContext';
+import { useDbData } from '@/hooks/useDbData';
 
 export const ImageGallery = () => {
   const { language, t } = useLanguage();
+  const { data: photos } = useDbData('gallery_photos', []);
+  const { data: videos } = useDbData('gallery_videos', []);
   const [activeCategory, setActiveCategory] = useState('All');
   const [activeTab, setActiveTab] = useState('photos');
   const [selectedItem, setSelectedItem] = useState(null);
@@ -20,7 +23,7 @@ export const ImageGallery = () => {
     'Official Ceremonies',
   ];
 
-  const filteredPhotos = photoGallery.filter((item) =>
+  const filteredPhotos = photos.filter((item) =>
     activeCategory === 'All' ? true : item.category === activeCategory
   );
 
@@ -36,7 +39,7 @@ export const ImageGallery = () => {
                 : 'text-slate-600 hover:text-slate-900'
             }`}
           >
-            {t('Photo Gallery', 'ছবি গ্যালারি')} ({photoGallery.length})
+            {t('Photo Gallery', 'ছবি গ্যালারি')} ({photos.length})
           </button>
           <button
             onClick={() => setActiveTab('videos')}
@@ -46,7 +49,7 @@ export const ImageGallery = () => {
                 : 'text-slate-600 hover:text-slate-900'
             }`}
           >
-            {t('Video Gallery', 'ভিডিও গ্যালারি')} ({videoGallery.length})
+            {t('Video Gallery', 'ভিডিও গ্যালারি')} ({videos.length})
           </button>
         </div>
 
@@ -101,7 +104,7 @@ export const ImageGallery = () => {
 
       {activeTab === 'videos' && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {videoGallery.map((vid) => (
+          {videos.map((vid) => (
             <div key={vid.id} className="bg-white rounded-md border border-slate-200 overflow-hidden shadow-sm">
               <div className="relative aspect-video bg-slate-950">
                 <iframe src={vid.url} title={vid.title} className="w-full h-full border-0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />

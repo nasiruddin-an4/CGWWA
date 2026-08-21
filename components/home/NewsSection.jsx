@@ -6,12 +6,14 @@ import { Calendar, ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import { SectionHeader } from '@/components/SectionHeader';
 import { Button } from '@/components/Button';
-import { newsArticles } from '@/data/news';
+
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { useDbData } from '@/hooks/useDbData';
 
 export function NewsSection() {
   const { language, t } = useLanguage();
   const observe = useScrollReveal();
+  const { data: newsData } = useDbData('news', []);
 
   return (
     <section className="space-y-8">
@@ -35,7 +37,7 @@ export function NewsSection() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-7">
-        {newsArticles.slice(0, 3).map((art, idx) =>
+        {newsData.slice(0, 3).map((art, idx) =>
         <Link
           href={`/news/${art.slug}`}
           key={art.id}

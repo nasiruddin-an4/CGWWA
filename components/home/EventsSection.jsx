@@ -7,12 +7,14 @@ import { MapPin, Clock, ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import { SectionHeader } from '@/components/SectionHeader';
 import { Button } from '@/components/Button';
-import { upcomingEvents } from '@/data/events';
+
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { useDbData } from '@/hooks/useDbData';
 
 export function EventsSection() {
   const { language, t } = useLanguage();
   const observe = useScrollReveal();
+  const { data: eventsData } = useDbData('events', []);
 
   // Sort events: Upcoming first (closest date), then Past events (most recent first)
   const sortedEvents = React.useMemo(() => {
@@ -20,7 +22,7 @@ export function EventsSection() {
     // Reset time to start of day for accurate comparison
     now.setHours(0, 0, 0, 0);
 
-    return [...upcomingEvents].sort((a, b) => {
+    return [...eventsData].sort((a, b) => {
       const dateA = new Date(a.date);
       const dateB = new Date(b.date);
       
@@ -36,7 +38,7 @@ export function EventsSection() {
       
       return dateB.getTime() - dateA.getTime();
     });
-  }, [upcomingEvents]);
+  }, [eventsData]);
 
   return (
     <section className="space-y-6">

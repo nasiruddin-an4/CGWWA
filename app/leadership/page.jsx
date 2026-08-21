@@ -2,13 +2,16 @@
 
 import React from 'react';
 import { PageHeader } from '@/components/PageHeader';
-import { presidentInfo } from '@/data/leadership';
+
+import { useDbData } from '@/hooks/useDbData';
 import Link from 'next/link';
 import { ArrowRight, Users, Map, Heart, Award } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 
 export default function LeadershipOverviewPage() {
   const { language, t } = useLanguage();
+  const { data: dbData } = useDbData('leadership', [{}]);
+  const presidentInfo = dbData[0] || {};
 
   return (
     <div className="space-y-10 max-w-7xl mx-auto">

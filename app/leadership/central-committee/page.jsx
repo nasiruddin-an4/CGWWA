@@ -2,15 +2,17 @@
 
 import React from 'react';
 import { PageHeader } from '@/components/PageHeader';
-import { centralCommittee } from '@/data/leadership';
+
 import { useLanguage } from '@/context/LanguageContext';
+import { useDbData } from '@/hooks/useDbData';
 
 export default function CentralCommitteePage() {
   const { language, t } = useLanguage();
+  const { data: dbData } = useDbData('central_committee', []);
 
   // Extract tiers based on the serial order (skipping president at index 0)
-  const executiveTier = centralCommittee.slice(1, 3); // Vice President, General Secretary
-  const memberTier = centralCommittee.slice(3); // The rest
+  const executiveTier = dbData.slice(1, 3); // Vice President, General Secretary
+  const memberTier = dbData.slice(3); // The rest
 
   const MemberCard = ({ member }) => (
     <div className="flex flex-col items-center group transition-all duration-300 w-full max-w-[280px] mx-auto">

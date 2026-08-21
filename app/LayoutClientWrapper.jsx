@@ -12,6 +12,11 @@ export default function LayoutClientWrapper({ children }) {
   const [searchModalOpen, setSearchModalOpen] = useState(false);
   const pathname = usePathname();
   const isHomePage = pathname === '/';
+  const isAdminRoute = pathname?.startsWith('/admin');
+
+  if (isAdminRoute) {
+    return <>{children}</>;
+  }
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800 flex flex-col font-sans antialiased">

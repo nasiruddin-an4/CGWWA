@@ -2,8 +2,8 @@
 
 import React, { useState } from "react";
 import { PageHeader } from "@/components/PageHeader";
-import { photoGallery } from "@/data/gallery";
 import { useLanguage } from "@/context/LanguageContext";
+import { useDbData } from "@/hooks/useDbData";
 import * as Icons from "lucide-react";
 
 export default function PhotoGalleryPage() {
@@ -15,6 +15,7 @@ export default function PhotoGalleryPage() {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 
   // Extract unique categories
+  const { data: photoGallery } = useDbData('gallery_photos', []);
   const categories = ["All", ...new Set(photoGallery.map((item) => item.category))];
 
   // Filter photos based on category
@@ -31,6 +32,10 @@ export default function PhotoGalleryPage() {
     setActiveEvent(null);
     setActiveImageIndex(0);
   };
+
+  const activeImages = activeEvent?.images?.length > 0 
+    ? activeEvent.images 
+    : (activeEvent?.url ? [activeEvent.url] : []);
 
   return (
     <div className="space-y-8 pb-20 max-w-7xl mx-auto px-4 sm:px-8">
@@ -147,7 +152,7 @@ export default function PhotoGalleryPage() {
                   {language === "bn" ? activeEvent.titleBn : activeEvent.title}
                 </h3>
                 <p className="text-white/70 text-sm">
-                  {activeEvent.images?.length} {t("Photos", "ছবি")} • {activeEvent.location}
+                  {activeImages.length} {t("Photos", "ছবি")} • {activeEvent.location}
                 </p>
               </div>
               
@@ -162,7 +167,7 @@ export default function PhotoGalleryPage() {
             {/* Main Large Image */}
             <div className="relative flex-1 min-h-[40vh] md:min-h-[60vh] flex items-center justify-center bg-black group/mainimg">
               <img 
-                src={activeEvent.images[activeImageIndex]} 
+                src={activeImages[activeImageIndex]} 
                 alt="Gallery" 
                 className="max-w-full max-h-[70vh] object-contain transition-opacity duration-300"
               />
@@ -176,7 +181,7 @@ export default function PhotoGalleryPage() {
                   <Icons.ChevronLeft className="w-6 h-6" />
                 </button>
               )}
-              {activeImageIndex < (activeEvent.images?.length - 1) && (
+              {activeImageIndex < (activeImages.length - 1) && (
                 <button 
                   onClick={() => setActiveImageIndex(prev => prev + 1)}
                   className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-black/50 hover:bg-brandBlue text-white rounded-full backdrop-blur-sm transition-all opacity-0 group-hover/mainimg:opacity-100"
@@ -187,10 +192,10 @@ export default function PhotoGalleryPage() {
             </div>
 
             {/* Thumbnails Strip */}
-            {activeEvent.images && activeEvent.images.length > 1 && (
+            {activeImages.length > 1 && (
               <div className="bg-slate-900 border-t border-white/10 p-4">
                 <div className="flex items-center gap-3 overflow-x-auto custom-scrollbar pb-2">
-                  {activeEvent.images.map((imgUrl, idx) => (
+                  {activeImages.map((imgUrl, idx) => (
                     <button
                       key={idx}
                       onClick={() => setActiveImageIndex(idx)}

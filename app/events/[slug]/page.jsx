@@ -2,8 +2,9 @@
 
 import React, { use } from "react";
 import { notFound } from "next/navigation";
-import { upcomingEvents } from "@/data/events";
+
 import { useLanguage } from "@/context/LanguageContext";
+import { useDbData } from "@/hooks/useDbData";
 import * as Icons from "lucide-react";
 import Link from "next/link";
 import { PageHeader } from "@/components/PageHeader";
@@ -11,11 +12,16 @@ import { PageHeader } from "@/components/PageHeader";
 export default function EventDetailPage({ params }) {
   const { language, t } = useLanguage();
   const { slug } = use(params);
+  const { data: dbEvents, loading } = useDbData('events', []);
   
   // Find the event by slug
-  const event = upcomingEvents.find((e) => e.slug === slug);
+  const event = dbEvents.find((e) => e.slug === slug);
 
-  if (!event) {
+  if (loading) {
+    return <div className="flex justify-center p-20"><Icons.Loader2 className="w-8 h-8 animate-spin text-brandBlue" /></div>;
+  }
+
+  if (!event && !loading) {
     notFound();
   }
 

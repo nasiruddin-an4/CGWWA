@@ -1,14 +1,19 @@
 'use client';
 
 import React from 'react';
-import { organizationInfo, coreValues } from '@/data/organization';
+
 import { ShieldCheck } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
+import { useDbData } from '@/hooks/useDbData';
 import { SectionHeader } from '@/components/SectionHeader';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/Card';
 
 export default function AboutPage() {
   const { language, t } = useLanguage();
+  const { data: dbOrg } = useDbData('organization', [{}]);
+  const organizationInfo = dbOrg[0] || {};
+  
+  const { data: coreValues } = useDbData('core_values', []);
 
   return (
     <div className="space-y-10 max-w-7xl mx-auto">
@@ -60,7 +65,7 @@ export default function AboutPage() {
               <div className="flex justify-between py-1.5 border-b border-white/10">
                 <span className="text-[#8E9299] shrink-0 mr-4">{t('Headquarters:', 'হেডকোয়ার্টার্স:')}</span>
                 <span className="font-bold text-white text-right max-w-[200px] leading-tight">
-                  {t(organizationInfo.headquarters.address, organizationInfo.headquarters.addressBn)}, {organizationInfo.headquarters.city}-{organizationInfo.headquarters.postalCode}
+                  {t(organizationInfo?.headquarters?.address || '', organizationInfo?.headquarters?.addressBn || '')}, {organizationInfo?.headquarters?.city ? `${organizationInfo.headquarters.city}-${organizationInfo.headquarters.postalCode}` : ''}
                 </span>
               </div>
             </div>

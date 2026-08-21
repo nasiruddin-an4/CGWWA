@@ -1,13 +1,17 @@
 "use client";
 
 import React, { useState } from "react";
-import { organizationInfo } from "@/data/organization";
+
 import { useLanguage } from "@/context/LanguageContext";
+import { useDbData } from "@/hooks/useDbData";
 import * as Icons from "lucide-react";
 import Link from "next/link";
 
 export default function ContactPage() {
   const { language, t } = useLanguage();
+  const { data: dbOrg } = useDbData('organization', [{}]);
+  const organizationInfo = dbOrg[0] || {};
+
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
 
@@ -74,7 +78,7 @@ export default function ContactPage() {
                   <div>
                     <p className="font-bold text-slate-800 text-sm mb-1">{t("CGFWA Bhaban", "সিজিএফডব্লিউএ ভবন")}</p>
                     <p className="text-slate-500 text-sm leading-relaxed">
-                      {language === "bn" ? organizationInfo.headquarters.addressBn : organizationInfo.headquarters.address}
+                      {language === "bn" ? organizationInfo?.headquarters?.addressBn : organizationInfo?.headquarters?.address}
                     </p>
                   </div>
                 </div>
@@ -86,7 +90,7 @@ export default function ContactPage() {
                   <div>
                     <p className="font-bold text-slate-800 text-sm mb-1">{t("Phone", "ফোন")}</p>
                     <p className="text-slate-500 text-sm font-medium">
-                      {organizationInfo.headquarters.phone[0]}
+                      {organizationInfo?.headquarters?.phone?.[0]}
                     </p>
                   </div>
                 </div>
@@ -98,7 +102,7 @@ export default function ContactPage() {
                   <div>
                     <p className="font-bold text-slate-800 text-sm mb-1">{t("Email", "ইমেইল")}</p>
                     <p className="text-slate-500 text-sm font-medium">
-                      {organizationInfo.headquarters.email}
+                      {organizationInfo?.headquarters?.email}
                     </p>
                   </div>
                 </div>

@@ -12,19 +12,21 @@ import 'swiper/css/navigation';
 import { useLanguage } from '@/context/LanguageContext';
 import { SectionHeader } from '@/components/SectionHeader';
 import { Button } from '@/components/Button';
-import { activitiesData } from '@/data/activities';
+
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { useDbData } from '@/hooks/useDbData';
 
 export function ProgramsSection() {
   const { language, t } = useLanguage();
   const observe = useScrollReveal();
   const [swiper, setSwiper] = React.useState(null);
+  const { data: actData } = useDbData('activities', []);
 
   // Flatten all events from all categories
   const allEvents = React.useMemo(() => {
     const events = [];
-    activitiesData.forEach(cat => {
-      cat.events.forEach(ev => {
+    actData.forEach(cat => {
+      cat.events?.forEach(ev => {
         events.push({
           ...ev,
           categorySlug: cat.slug,
@@ -34,7 +36,7 @@ export function ProgramsSection() {
       });
     });
     return events;
-  }, []);
+  }, [actData]);
 
   return (
     <section className="w-full bg-brandBlue py-16 sm:py-24">
@@ -75,7 +77,8 @@ export function ProgramsSection() {
         </div>
 
         <div className="relative">
-          <Swiper
+          {allEvents.length > 0 ? (
+            <Swiper
             modules={[Navigation, Autoplay]}
             onSwiper={setSwiper}
             loop={true}
@@ -142,6 +145,9 @@ export function ProgramsSection() {
               );
             })}
           </Swiper>
+          ) : (
+            <div className="flex justify-center p-12 text-white/50 font-bold">No activities found.</div>
+          )}
         </div>
       </div>
     </section>
