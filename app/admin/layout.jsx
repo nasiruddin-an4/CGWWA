@@ -3,9 +3,9 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { LayoutDashboard, Newspaper, Calendar, Image as ImageIcon, Activity, Users, Building2, BookOpen, Download, LogOut, Loader2, Settings, ShieldCheck, ChevronRight, ChevronDown, UserCircle, ExternalLink } from 'lucide-react';
+import { LayoutDashboard, Newspaper, Calendar, Image as ImageIcon, Activity, Users, Building2, BookOpen, Library, Download, LogOut, Loader2, Settings, ShieldCheck, ChevronRight, ChevronDown, UserCircle, ExternalLink, MonitorPlay } from 'lucide-react';
 import Image from 'next/image';
-
+import { CoastGuardLogo } from '@/components/CoastGuardLogo';
 export default function AdminLayout({ children }) {
   const pathname = usePathname();
   const router = useRouter();
@@ -19,12 +19,14 @@ export default function AdminLayout({ children }) {
 
   const navItems = [
     { name: 'Dashboard', href: '/admin', icon: LayoutDashboard },
+    { name: 'Hero Section', href: '/admin/hero', icon: MonitorPlay },
     { name: 'Manage News', href: '/admin/news', icon: Newspaper },
     { name: 'Manage Events', href: '/admin/events', icon: Calendar },
     { name: 'Gallery', href: '/admin/gallery', icon: ImageIcon },
     { name: 'Activities', href: '/admin/activities', icon: Activity },
     { name: 'Leadership', href: '/admin/leadership', icon: Users },
     { name: 'Programs', href: '/admin/programs', icon: BookOpen },
+    { name: 'Manage E-Books', href: '/admin/ebooks', icon: Library },
     { name: 'Downloads', href: '/admin/downloads', icon: Download },
   ];
 
@@ -53,7 +55,7 @@ export default function AdminLayout({ children }) {
 
         <div className="p-8 relative z-10 flex items-center gap-4 border-b border-white/5">
           <div className="w-12 h-12 bg-white/10 rounded-2xl p-2 backdrop-blur-md shadow-inner border border-white/10 flex items-center justify-center">
-            <img src="/logo.png" alt="CGFWA Logo" className="w-full h-full object-contain" />
+            <CoastGuardLogo className="w-full h-full object-contain drop-shadow-md" />
           </div>
           <div>
             <h2 className="font-bold text-lg tracking-tight text-white leading-tight">Admin Portal</h2>
@@ -164,7 +166,7 @@ export default function AdminLayout({ children }) {
         {/* Mobile Header */}
         <header className="bg-white border-b border-slate-200 p-4 flex lg:hidden items-center justify-between sticky top-0 z-20 shadow-sm">
           <div className="flex items-center gap-3">
-            <img src="/logo.png" alt="Logo" className="w-8 h-8 object-contain" />
+            <CoastGuardLogo className="w-8 h-8 object-contain" />
             <span className="font-bold text-brandBlue">Admin</span>
           </div>
           <button onClick={handleLogout} className="text-slate-500 hover:text-red-500 p-2">

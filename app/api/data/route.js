@@ -15,7 +15,8 @@ export async function GET(request) {
       'news', 'events', 'gallery_photos', 'gallery_videos',
       'activities', 'leadership', 'central_committee', 'zone_chairmen',
       'dhaka_committee', 'lc_dhaka_committee', 'organization',
-      'core_values', 'history_milestones', 'programs', 'downloads'
+      'core_values', 'history_milestones', 'programs', 'downloads',
+      'ebooks', 'hero'
     ];
 
     if (!allowedCollections.includes(collection)) {

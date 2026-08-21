@@ -1,15 +1,26 @@
 'use client';
 
-import React, { use } from 'react';
+import React, { use, useState, useEffect } from 'react';
 import { LeadershipForm } from '@/components/admin/forms/LeadershipForm';
-import { useDbData } from '@/hooks/useDbData';
 import { Loader2 } from 'lucide-react';
 
 export default function EditLeadershipPage({ params }) {
   const { type, id } = use(params);
   
-  // Actually, we need to fetch all leadership data to find the specific member
-  const { data, loading } = useDbData('leadership_data', null);
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch('/api/admin/leadership')
+      .then(res => res.json())
+      .then(result => {
+        if (result.success) {
+          setData(result.data);
+        }
+      })
+      .catch(console.error)
+      .finally(() => setLoading(false));
+  }, []);
 
   if (loading) {
     return <div className="flex justify-center p-20"><Loader2 className="w-8 h-8 animate-spin text-brandBlue" /></div>;
@@ -34,7 +45,7 @@ export default function EditLeadershipPage({ params }) {
     }
   }
 
-  if (!member && !loading) {
+  if (!member) {
     return <div className="p-10 text-center text-slate-500 font-bold">Member not found!</div>;
   }
 

@@ -5,13 +5,15 @@ import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 
 import Image from 'next/image';
+import { useDbData } from '@/hooks/useDbData';
 
 export function HeroSection() {
   const { language, t } = useLanguage();
   const [activeHeroTab, setActiveHeroTab] = useState(0);
+  const { data: dbBanners } = useDbData('hero_banners', []);
 
   // Hero Carousel Stories
-  const heroStories = [
+  const defaultHeroStories = [
     {
       title: t(
         'Sewing Training Workshop',
@@ -61,6 +63,16 @@ export function HeroSection() {
       link: '/about'
     }
   ];
+
+  // Merge db banners formatting them for the view
+  const dbHeroStories = dbBanners.map(b => ({
+    title: language === 'bn' && b.titleBn ? b.titleBn : b.title,
+    desc: language === 'bn' && b.descBn ? b.descBn : b.desc,
+    image: b.image,
+    link: b.link || '#'
+  }));
+
+  const heroStories = dbHeroStories.length > 0 ? dbHeroStories : defaultHeroStories;
 
   // Auto-play for Hero Carousel
   useEffect(() => {
