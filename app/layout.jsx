@@ -17,7 +17,22 @@ const outfit = Outfit({
 
 export const metadata = {
   title: 'Coast Guard Family Welfare Association',
-  description: 'Dedicated to Coastal Development, Humanitarian Relief & Social Empowerment'
+  description: 'Dedicated to Coastal Development, Humanitarian Relief & Social Empowerment',
+  icons: {
+    icon: 'https://res.cloudinary.com/armmzmyq/image/upload/v1787248712/cgfwa/englishLogo_yztxt4.png',
+  },
+  openGraph: {
+    title: 'Coast Guard Family Welfare Association',
+    description: 'Dedicated to Coastal Development, Humanitarian Relief & Social Empowerment',
+    images: [
+      {
+        url: 'https://res.cloudinary.com/armmzmyq/image/upload/v1787248712/cgfwa/englishLogo_yztxt4.png',
+        width: 800,
+        height: 600,
+        alt: 'CGFWA Logo',
+      }
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {
