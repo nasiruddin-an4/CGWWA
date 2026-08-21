@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Mail, Phone, MapPin, ExternalLink, ShieldCheck, Facebook, Twitter, Youtube, MessageCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, ExternalLink, Facebook, Twitter, Youtube, MessageCircle } from 'lucide-react';
 import { organizationInfo } from '@/data/organization';
 import { useLanguage } from '@/context/LanguageContext';
 import { CoastGuardLogo } from './CoastGuardLogo';
@@ -14,26 +14,18 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-8 pt-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 pb-12 border-b border-white/10">
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <CoastGuardLogo className="w-12 h-14 shrink-0 drop-shadow-md" />
-              <div>
-                <h3 className="font-semibold text-white text-base tracking-tight">
-                  {t('CGFWA Bangladesh', 'সিজিএফডব্লিউএ বাংলাদেশ')}
-                </h3>
-                <span className="text-[11px] text-slate-400 block font-mono">
-                  Reg: {organizationInfo.registrationNo}
-                </span>
-              </div>
+            <div className="flex items-center gap-4">
+              <CoastGuardLogo className="w-16 h-20 shrink-0 drop-shadow-md" />
+              <h3 className="font-bold text-white text-lg leading-snug">
+                {t('CGFWA Bangladesh', 'সিজিএফডব্লিউএ বাংলাদেশ')}
+              </h3>
             </div>
-            <p className="text-[#8E9299] text-xs leading-relaxed">
-              {t(organizationInfo.tagline, organizationInfo.taglineBn)}
+            <p className="text-[#8E9299] text-sm leading-relaxed pr-4">
+              {t(
+                'Coast Guard Family Welfare Association is dedicated to the welfare and wellness of the coast guard members and their families.',
+                'কোস্ট গার্ড পরিবার কল্যাণ সমিতি কোস্ট গার্ড সদস্য এবং তাদের পরিবারের কল্যাণ ও সুস্থতার জন্য নিবেদিত।'
+              )}
             </p>
-            <div className="pt-2 flex items-center gap-2">
-              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-white text-[10px] font-bold tracking-widest uppercase">
-                <ShieldCheck className="w-3.5 h-3.5 text-brandYellow brightness-150" />
-                {t('Gov Advisory Partner', 'সরকারি পরামর্শক পর্ষদ')}
-              </span>
-            </div>
           </div>
 
           <div>
@@ -85,7 +77,7 @@ export const Footer = () => {
         </div>
 
         <div className="py-5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#8E9299]">
-          <p>© {new Date().getFullYear()} Bangladesh Coastal & Community Welfare Association. {t('All Rights Reserved.', 'সর্বস্বত্ব সংরক্ষিত।')}</p>
+          <p>© {new Date().getFullYear()} {t(organizationInfo.name, organizationInfo.nameBn)}. {t('All Rights Reserved.', 'সর্বস্বত্ব সংরক্ষিত।')}</p>
           <div className="flex items-center gap-4 text-[#8E9299]">
             <Link href="/contact" className="hover:text-white">{t('Terms of Service', 'ব্যবহারের শর্তাবলী')}</Link>
             <span>•</span>

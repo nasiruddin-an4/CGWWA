@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { PageHeader } from '@/components/PageHeader';
 import { organizationInfo, coreValues } from '@/data/organization';
 import { ShieldCheck } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
@@ -13,14 +12,6 @@ export default function AboutPage() {
 
   return (
     <div className="space-y-10 max-w-7xl mx-auto">
-      <PageHeader
-        category="Institutional Profile"
-        categoryBn="প্রাতিষ্ঠানিক প্রোফাইল"
-        title="About Bangladesh Coastal & Community Welfare Association"
-        titleBn="বাংলাদেশ উপকূল ও সমাজ কল্যাণ সংস্থা (বিসিসিডব্লিউএ)"
-        subtitle="Genesis, Governance, Statutory Mandate, and Operational Footprint across 64 Districts."
-        subtitleBn="সংস্থার উৎপত্তি, শাসনব্যবস্থা, আইনি গঠনতন্ত্র ও ৬৪ জেলায় কল্যাণমূলক প্রসার।" />
-      
 
       {/* Overview Section */}
       <div className="bg-white rounded-md p-6 sm:p-10 border border-[#E5E7EB] shadow-xs space-y-6">
@@ -64,11 +55,13 @@ export default function AboutPage() {
               </div>
               <div className="flex justify-between py-1.5 border-b border-white/10">
                 <span className="text-[#8E9299]">{t('Advisory Body:', 'উপদেষ্টা পর্ষদ:')}</span>
-                <span className="font-bold text-brandBlue brightness-150">Social Welfare Advisory Board</span>
+                <span className="font-bold text-white">Social Welfare Advisory Board</span>
               </div>
               <div className="flex justify-between py-1.5 border-b border-white/10">
-                <span className="text-[#8E9299]">{t('Headquarters:', 'হেডকোয়ার্টার্স:')}</span>
-                <span className="font-bold text-white">Agargaon, Dhaka</span>
+                <span className="text-[#8E9299] shrink-0 mr-4">{t('Headquarters:', 'হেডকোয়ার্টার্স:')}</span>
+                <span className="font-bold text-white text-right max-w-[200px] leading-tight">
+                  {t(organizationInfo.headquarters.address, organizationInfo.headquarters.addressBn)}, {organizationInfo.headquarters.city}-{organizationInfo.headquarters.postalCode}
+                </span>
               </div>
             </div>
           </div>

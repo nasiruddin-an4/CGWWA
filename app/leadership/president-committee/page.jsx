@@ -13,8 +13,6 @@ export default function PresidentCommitteePage() {
   return (
     <div className="space-y-12 max-w-7xl mx-auto pb-16">
       <PageHeader
-        category="Executive Committee"
-        categoryBn="নির্বাহী কমিটি"
         title="President Committee"
         titleBn="প্রেসিডেন্ট কমিটি"
         subtitle="The dedicated central leadership steering the welfare and community initiatives."
@@ -38,12 +36,6 @@ export default function PresidentCommitteePage() {
             {/* President Content */}
             <div className="flex-1 space-y-6 text-center md:text-left">
               <div className="space-y-3">
-                <div className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-slate-600 mb-2">
-                  <Shield className="w-4 h-4" />
-                  <span className="text-[11px] uppercase font-bold tracking-widest">
-                    {t('Chief Executive', 'প্রধান নির্বাহী')}
-                  </span>
-                </div>
                 <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#1A233A]">
                   {language === 'bn' ? presidentInfo.nameBn : presidentInfo.name}
                 </h2>
@@ -61,10 +53,6 @@ export default function PresidentCommitteePage() {
               </div>
 
               <div className="pt-4 flex flex-col sm:flex-row gap-4 items-center sm:justify-start border-t border-slate-100">
-                <div className="flex items-center gap-2 px-4 py-2.5 rounded-lg border border-slate-200 text-sm text-slate-600 bg-slate-50">
-                  <Mail className="w-4 h-4 text-brandBlue" />
-                  <span>president@cgfwa.org</span>
-                </div>
                 <Link 
                   href="/leadership/president-message"
                   className="flex items-center gap-2 px-6 py-2.5 rounded-lg bg-[#002B5B] text-white font-medium hover:bg-brandBlue/90 transition-colors shadow-md"
