@@ -7,7 +7,7 @@ import { HeaderNavbar } from '@/components/HeaderNavbar';
 import { Footer } from '@/components/Footer';
 import { SearchModal } from '@/components/SearchModal';
 import { ScrollToTop } from '@/components/ScrollToTop';
-
+import { WelcomePopup } from '@/components/WelcomePopup';
 export default function LayoutClientWrapper({ children }) {
   const [searchModalOpen, setSearchModalOpen] = useState(false);
   const pathname = usePathname();
@@ -39,6 +39,9 @@ export default function LayoutClientWrapper({ children }) {
 
       {/* Floating Scroll-To-Top Control */}
       <ScrollToTop />
+
+      {/* Initial Load Welcome Popup */}
+      <WelcomePopup />
     </div>);
 
 }
